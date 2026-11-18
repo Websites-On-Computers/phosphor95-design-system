@@ -1,0 +1,81 @@
+{
+  "button": {
+    "$description": "Push button: raised bevel, pressed = sunken bevel + 1px content shift.",
+    "face": {
+      "$type": "color",
+      "$value": "{surface.face}"
+    },
+    "face-hover": {
+      "$type": "color",
+      "$value": "{surface.face-hover}"
+    },
+    "face-pressed": {
+      "$type": "color",
+      "$value": "{surface.face-pressed}"
+    },
+    "text": {
+      "$type": "color",
+      "$value": "{text.primary}"
+    },
+    "text-hover": {
+      "$type": "color",
+      "$value": "{text.hot}"
+    },
+    "text-disabled": {
+      "$type": "color",
+      "$value": "{text.disabled}"
+    },
+    "frame-default": {
+      "$type": "color",
+      "$value": "{border.strong}",
+      "$description": "Extra 1px frame on the default button (Enter activates it)"
+    },
+    "primary": {
+      "$type": "color",
+      "$description": "Solid phosphor button for the one main action",
+      "face": {
+        "$value": "{fill.solid}"
+      },
+      "text": {
+        "$value": "{text.inverse}"
+      },
+      "face-hover": {
+        "$value": "{color.phosphor.12}"
+      }
+    },
+    "height": {
+      "$type": "dimension",
+      "$value": "{size.control.sm}"
+    },
+    "padding-x": {
+      "$type": "dimension",
+      "$value": "{space.12}"
+    },
+    "min-width": {
+      "$type": "dimension",
+      "$value": {
+        "value": 72,
+        "unit": "px"
+      },
+      "$description": "Win95's 75px OK/Cancel width, snapped to the 8px cell grid"
+    },
+    "gap": {
+      "$type": "dimension",
+      "$value": "{space.8}",
+      "$description": "Between adjacent buttons"
+    },
+    "toggle": {
+      "$type": "color",
+      "$description": "Toggle button when on: inverted, like a selection",
+      "face-on": {
+        "$value": "{fill.solid}"
+      },
+      "text-on": {
+        "$value": "{text.inverse}"
+      },
+      "face-on-hover": {
+        "$value": "{button.primary.face-hover}"
+      }
+    }
+  }
+}

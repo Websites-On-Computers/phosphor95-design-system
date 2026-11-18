@@ -1,0 +1,22 @@
+# Phosphor-95 system identity + fonts.
+# Rename the machine's persona here; every banner, the START button,
+# boot splash, GRUB menu, lock screen and wallpaper pick it up on rebuild.
+
+[identity]
+name      = "TERMINAL-01"         # shown on banners, boot, wallpaper, lock screen
+start     = "START"               # label on the apps-menu button
+tagline   = "PHOSPHOR-95 // LOCAL INTELLIGENCE NODE"
+bios      = "PHOSPHOR BIOS v4.51" # Plymouth/GRUB POST header
+
+[fonts]
+ui        = "PxPlus IBM VGA 8x16" # GTK + Shell UI (same IBM VGA face as the terminal; was W95FA)
+ui_size   = 12                    # 12pt = 16px at 96 dpi = native pixel size (crisp)
+mono      = "PxPlus IBM VGA 9x16" # terminal, code
+mono_size = 12                    # 12pt = 16px at 96 dpi = native pixel size
+display   = "VT323"               # big text: clock, lock screen, splash
+
+[desktop]
+# 'window-list' taskbar at the bottom (Win95) + slim top HUD bar.
+taskbar   = true
+# Terminal CRT shader on by default (toggle: `crt on|off`)
+crt       = true

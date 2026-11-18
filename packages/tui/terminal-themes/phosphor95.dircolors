@@ -1,0 +1,47 @@
+# Phosphor95 dircolors (uses ANSI indices, so it follows whichever Phosphor95 scheme is installed).
+#   eval "$(dircolors -b phosphor95.dircolors)"
+# Monochrome-first: lightness carries most of the meaning; only broken links get red.
+TERM *
+COLORTERM ?*
+NORMAL 00
+FILE 00
+DIR 01;92
+LINK 36
+ORPHAN 01;31
+MISSING 01;31
+EXEC 95
+FIFO 33
+SOCK 33
+BLK 01;33
+CHR 01;33
+SETUID 07;33
+SETGID 07;33
+STICKY_OTHER_WRITABLE 07;92
+OTHER_WRITABLE 04;92
+STICKY 04;92
+.tar 33
+.tgz 33
+.gz 33
+.zip 33
+.xz 33
+.zst 33
+.7z 33
+.deb 33
+.png 35
+.jpg 35
+.gif 35
+.svg 35
+.webp 35
+.mp3 35
+.ogg 35
+.wav 35
+.mp4 35
+.md 97
+.txt 97
+.toml 96
+.json 96
+.yaml 96
+.yml 96
+.bak 90
+.tmp 90
+.log 90

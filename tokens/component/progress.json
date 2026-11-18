@@ -1,0 +1,27 @@
+{
+  "progress": {
+    "$description": "Segmented block progress (the boot screen bar). TUI: block glyphs.",
+    "$type": "color",
+    "track": {
+      "$value": "{fill.track}"
+    },
+    "fill": {
+      "$value": "{fill.solid}"
+    },
+    "label": {
+      "$value": "{text.primary}"
+    },
+    "segment-width": {
+      "$type": "dimension",
+      "$value": "{space.8}"
+    },
+    "segment-gap": {
+      "$type": "dimension",
+      "$value": "{space.2}"
+    },
+    "height": {
+      "$type": "dimension",
+      "$value": "{space.16}"
+    }
+  }
+}

@@ -1,0 +1,227 @@
+{
+  "$description": "High contrast: green on true black. No dim or faint steps for anything meaningful; bevels flatten to solid bright edges. For low vision, bright rooms, and projectors.",
+  "color": {
+    "$type": "color",
+    "phosphor": {
+      "$description": "Theme ramp -> color.green",
+      "1": {
+        "$value": "{color.green.1}"
+      },
+      "2": {
+        "$value": "{color.green.2}"
+      },
+      "3": {
+        "$value": "{color.green.3}"
+      },
+      "4": {
+        "$value": "{color.green.4}"
+      },
+      "5": {
+        "$value": "{color.green.5}"
+      },
+      "6": {
+        "$value": "{color.green.6}"
+      },
+      "7": {
+        "$value": "{color.green.7}"
+      },
+      "8": {
+        "$value": "{color.green.8}"
+      },
+      "9": {
+        "$value": "{color.green.9}"
+      },
+      "10": {
+        "$value": "{color.green.10}"
+      },
+      "11": {
+        "$value": "{color.green.11}"
+      },
+      "12": {
+        "$value": "{color.green.12}"
+      }
+    }
+  },
+  "surface": {
+    "$type": "color",
+    "base": {
+      "$value": "{color.void}"
+    },
+    "sunken": {
+      "$value": "{color.void}"
+    },
+    "face": {
+      "$value": "{color.void}"
+    },
+    "face-hover": {
+      "$value": "{color.green.3}"
+    },
+    "face-pressed": {
+      "$value": "{color.green.3}"
+    },
+    "selected-subtle": {
+      "$value": "{color.green.3}"
+    }
+  },
+  "text": {
+    "$type": "color",
+    "secondary": {
+      "$value": "{color.green.10}"
+    },
+    "disabled": {
+      "$value": "{color.green.8}",
+      "$description": "Readable in HC; disabled state is also shown by a dashed border"
+    },
+    "hot": {
+      "$value": "{color.green.12}"
+    }
+  },
+  "bevel": {
+    "$type": "color",
+    "hi": {
+      "$value": "{color.green.10}"
+    },
+    "light": {
+      "$value": "{color.green.10}"
+    },
+    "shadow": {
+      "$value": "{color.green.10}"
+    },
+    "dark": {
+      "$value": "{color.green.10}"
+    }
+  },
+  "border": {
+    "$type": "color",
+    "subtle": {
+      "$value": "{color.green.8}"
+    },
+    "default": {
+      "$value": "{color.green.10}"
+    },
+    "strong": {
+      "$value": "{color.green.12}"
+    }
+  },
+  "title": {
+    "$type": "color",
+    "inactive": {
+      "bg": {
+        "$value": "{color.void}"
+      },
+      "fg": {
+        "$value": "{color.green.10}"
+      }
+    }
+  },
+  "fill": {
+    "$type": "color",
+    "track": {
+      "$value": "{color.green.3}"
+    }
+  },
+  "status": {
+    "$type": "color",
+    "ok": {
+      "fg": {
+        "$value": "{color.green.10}"
+      },
+      "bg": {
+        "$value": "{color.void}"
+      },
+      "border": {
+        "$value": "{color.green.10}"
+      }
+    },
+    "info": {
+      "fg": {
+        "$value": "{color.green.11}"
+      },
+      "bg": {
+        "$value": "{color.void}"
+      },
+      "border": {
+        "$value": "{color.green.11}"
+      }
+    },
+    "warn": {
+      "fg": {
+        "$value": "{color.amber.10}"
+      },
+      "bg": {
+        "$value": "{color.void}"
+      },
+      "border": {
+        "$value": "{color.amber.10}"
+      }
+    },
+    "error": {
+      "fg": {
+        "$value": "{color.red.9}"
+      },
+      "bg": {
+        "$value": "{color.void}"
+      },
+      "border": {
+        "$value": "{color.red.9}"
+      }
+    }
+  },
+  "ansi": {
+    "$type": "color",
+    "black": {
+      "$value": "{color.ansi.hc.black}"
+    },
+    "red": {
+      "$value": "{color.ansi.hc.red}"
+    },
+    "green": {
+      "$value": "{color.ansi.hc.green}"
+    },
+    "yellow": {
+      "$value": "{color.ansi.hc.yellow}"
+    },
+    "blue": {
+      "$value": "{color.ansi.hc.blue}"
+    },
+    "magenta": {
+      "$value": "{color.ansi.hc.magenta}"
+    },
+    "cyan": {
+      "$value": "{color.ansi.hc.cyan}"
+    },
+    "white": {
+      "$value": "{color.ansi.hc.white}"
+    },
+    "bright-black": {
+      "$value": "{color.ansi.hc.bright-black}"
+    },
+    "bright-red": {
+      "$value": "{color.ansi.hc.bright-red}"
+    },
+    "bright-green": {
+      "$value": "{color.ansi.hc.bright-green}"
+    },
+    "bright-yellow": {
+      "$value": "{color.ansi.hc.bright-yellow}"
+    },
+    "bright-blue": {
+      "$value": "{color.ansi.hc.bright-blue}"
+    },
+    "bright-magenta": {
+      "$value": "{color.ansi.hc.bright-magenta}"
+    },
+    "bright-cyan": {
+      "$value": "{color.ansi.hc.bright-cyan}"
+    },
+    "bright-white": {
+      "$value": "{color.ansi.hc.bright-white}"
+    }
+  },
+  "disabled": {
+    "border-style": {
+      "$type": "strokeStyle",
+      "$value": "dashed"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "tabs": {
+    "$type": "color",
+    "active-bg": {
+      "$value": "{surface.face}"
+    },
+    "active-fg": {
+      "$value": "{text.hot}"
+    },
+    "inactive-bg": {
+      "$value": "{surface.sunken}"
+    },
+    "inactive-fg": {
+      "$value": "{text.secondary}"
+    },
+    "height": {
+      "$type": "dimension",
+      "$value": "{size.control.sm}"
+    }
+  }
+}

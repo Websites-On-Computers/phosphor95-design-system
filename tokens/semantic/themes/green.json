@@ -1,0 +1,143 @@
+{
+  "$description": "P1 green phosphor: the default. Exactly the Phosphor-95 desktop.",
+  "color": {
+    "$type": "color",
+    "phosphor": {
+      "$description": "Theme ramp -> color.green",
+      "1": {
+        "$value": "{color.green.1}"
+      },
+      "2": {
+        "$value": "{color.green.2}"
+      },
+      "3": {
+        "$value": "{color.green.3}"
+      },
+      "4": {
+        "$value": "{color.green.4}"
+      },
+      "5": {
+        "$value": "{color.green.5}"
+      },
+      "6": {
+        "$value": "{color.green.6}"
+      },
+      "7": {
+        "$value": "{color.green.7}"
+      },
+      "8": {
+        "$value": "{color.green.8}"
+      },
+      "9": {
+        "$value": "{color.green.9}"
+      },
+      "10": {
+        "$value": "{color.green.10}"
+      },
+      "11": {
+        "$value": "{color.green.11}"
+      },
+      "12": {
+        "$value": "{color.green.12}"
+      }
+    }
+  },
+  "status": {
+    "$type": "color",
+    "ok": {
+      "fg": {
+        "$value": "{color.green.10}"
+      },
+      "bg": {
+        "$value": "{color.green.3}"
+      },
+      "border": {
+        "$value": "{color.green.9}"
+      }
+    },
+    "info": {
+      "fg": {
+        "$value": "{color.green.11}"
+      },
+      "bg": {
+        "$value": "{color.green.3}"
+      },
+      "border": {
+        "$value": "{color.green.9}"
+      }
+    },
+    "warn": {
+      "fg": {
+        "$value": "{color.amber.10}"
+      },
+      "bg": {
+        "$value": "{color.amber.3}"
+      },
+      "border": {
+        "$value": "{color.amber.9}"
+      }
+    },
+    "error": {
+      "fg": {
+        "$value": "{color.red.9}"
+      },
+      "bg": {
+        "$value": "{color.red.3}"
+      },
+      "border": {
+        "$value": "{color.red.9}"
+      }
+    }
+  },
+  "ansi": {
+    "$type": "color",
+    "black": {
+      "$value": "{color.ansi.green.black}"
+    },
+    "red": {
+      "$value": "{color.ansi.green.red}"
+    },
+    "green": {
+      "$value": "{color.ansi.green.green}"
+    },
+    "yellow": {
+      "$value": "{color.ansi.green.yellow}"
+    },
+    "blue": {
+      "$value": "{color.ansi.green.blue}"
+    },
+    "magenta": {
+      "$value": "{color.ansi.green.magenta}"
+    },
+    "cyan": {
+      "$value": "{color.ansi.green.cyan}"
+    },
+    "white": {
+      "$value": "{color.ansi.green.white}"
+    },
+    "bright-black": {
+      "$value": "{color.ansi.green.bright-black}"
+    },
+    "bright-red": {
+      "$value": "{color.ansi.green.bright-red}"
+    },
+    "bright-green": {
+      "$value": "{color.ansi.green.bright-green}"
+    },
+    "bright-yellow": {
+      "$value": "{color.ansi.green.bright-yellow}"
+    },
+    "bright-blue": {
+      "$value": "{color.ansi.green.bright-blue}"
+    },
+    "bright-magenta": {
+      "$value": "{color.ansi.green.bright-magenta}"
+    },
+    "bright-cyan": {
+      "$value": "{color.ansi.green.bright-cyan}"
+    },
+    "bright-white": {
+      "$value": "{color.ansi.green.bright-white}"
+    }
+  }
+}

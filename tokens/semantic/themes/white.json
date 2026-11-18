@@ -1,0 +1,164 @@
+{
+  "$description": "P4 white phosphor: monochrome, with real green/amber/red reserved for status.",
+  "color": {
+    "$type": "color",
+    "phosphor": {
+      "$description": "Theme ramp -> color.white",
+      "1": {
+        "$value": "{color.white.1}"
+      },
+      "2": {
+        "$value": "{color.white.2}"
+      },
+      "3": {
+        "$value": "{color.white.3}"
+      },
+      "4": {
+        "$value": "{color.white.4}"
+      },
+      "5": {
+        "$value": "{color.white.5}"
+      },
+      "6": {
+        "$value": "{color.white.6}"
+      },
+      "7": {
+        "$value": "{color.white.7}"
+      },
+      "8": {
+        "$value": "{color.white.8}"
+      },
+      "9": {
+        "$value": "{color.white.9}"
+      },
+      "10": {
+        "$value": "{color.white.10}"
+      },
+      "11": {
+        "$value": "{color.white.11}"
+      },
+      "12": {
+        "$value": "{color.white.12}"
+      }
+    }
+  },
+  "status": {
+    "$type": "color",
+    "ok": {
+      "fg": {
+        "$value": "{color.green.10}"
+      },
+      "bg": {
+        "$value": "{color.green.3}"
+      },
+      "border": {
+        "$value": "{color.green.9}"
+      }
+    },
+    "info": {
+      "fg": {
+        "$value": "{color.blue.10}"
+      },
+      "bg": {
+        "$value": "{color.blue.3}"
+      },
+      "border": {
+        "$value": "{color.blue.9}"
+      }
+    },
+    "warn": {
+      "fg": {
+        "$value": "{color.amber.10}"
+      },
+      "bg": {
+        "$value": "{color.amber.3}"
+      },
+      "border": {
+        "$value": "{color.amber.9}"
+      }
+    },
+    "error": {
+      "fg": {
+        "$value": "{color.red.9}"
+      },
+      "bg": {
+        "$value": "{color.red.3}"
+      },
+      "border": {
+        "$value": "{color.red.9}"
+      }
+    }
+  },
+  "ansi": {
+    "$type": "color",
+    "black": {
+      "$value": "{color.ansi.white.black}"
+    },
+    "red": {
+      "$value": "{color.ansi.white.red}"
+    },
+    "green": {
+      "$value": "{color.ansi.white.green}"
+    },
+    "yellow": {
+      "$value": "{color.ansi.white.yellow}"
+    },
+    "blue": {
+      "$value": "{color.ansi.white.blue}"
+    },
+    "magenta": {
+      "$value": "{color.ansi.white.magenta}"
+    },
+    "cyan": {
+      "$value": "{color.ansi.white.cyan}"
+    },
+    "white": {
+      "$value": "{color.ansi.white.white}"
+    },
+    "bright-black": {
+      "$value": "{color.ansi.white.bright-black}"
+    },
+    "bright-red": {
+      "$value": "{color.ansi.white.bright-red}"
+    },
+    "bright-green": {
+      "$value": "{color.ansi.white.bright-green}"
+    },
+    "bright-yellow": {
+      "$value": "{color.ansi.white.bright-yellow}"
+    },
+    "bright-blue": {
+      "$value": "{color.ansi.white.bright-blue}"
+    },
+    "bright-magenta": {
+      "$value": "{color.ansi.white.bright-magenta}"
+    },
+    "bright-cyan": {
+      "$value": "{color.ansi.white.bright-cyan}"
+    },
+    "bright-white": {
+      "$value": "{color.ansi.white.bright-white}"
+    }
+  },
+  "operator": {
+    "$type": "color",
+    "hair": {
+      "$value": "{color.avatar.white.hair}"
+    },
+    "shade-1": {
+      "$value": "{color.avatar.white.shade-1}"
+    },
+    "shade-2": {
+      "$value": "{color.avatar.white.shade-2}"
+    },
+    "mid": {
+      "$value": "{color.avatar.white.mid}"
+    },
+    "skin": {
+      "$value": "{color.avatar.white.skin}"
+    },
+    "light": {
+      "$value": "{color.avatar.white.light}"
+    }
+  }
+}

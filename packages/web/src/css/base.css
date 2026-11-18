@@ -1,0 +1,240 @@
+/* Phosphor95 base: classless styling for semantic HTML. Include it and plain
+   <button>, <input>, <fieldset>, <table>, <progress>… look right with no classes. */
+
+html {
+  background: var(--p95-surface-void);
+  scrollbar-color: var(--p95-surface-face) var(--p95-surface-sunken);
+}
+body {
+  background: var(--p95-surface-base);
+  color: var(--p95-text-primary);
+  font-family: var(--p95-font-family-ui);
+  font-size: var(--p95-font-size-16);
+  line-height: var(--p95-font-line-height-prose);
+  /* Pixel fonts are bitmaps: no smoothing, no synthetic bold or italics. */
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: never;
+  font-synthesis: none;
+  text-rendering: optimizeSpeed;
+}
+/* A themed subtree re-applies colour and background: inherited `color` is already resolved,
+   so without this, text inside <div data-theme="amber"> would stay the page's colour. */
+[data-theme]:not(html) { color: var(--p95-text-primary); background-color: var(--p95-surface-base); }
+::selection { background: var(--p95-select-bg); color: var(--p95-select-fg); }
+
+/* ---------------------------------------------------------------- type */
+h1, h2, h3 { font-family: var(--p95-font-family-display); font-weight: var(--p95-font-weight-regular); line-height: 1; color: var(--p95-text-hot); }
+h1 { font-size: var(--p95-font-size-64); text-transform: uppercase; }
+h2 { font-size: var(--p95-font-size-48); }
+h3 { font-size: var(--p95-font-size-32); }
+h4, h5, h6 { font-size: var(--p95-font-size-16); font-weight: var(--p95-font-weight-regular); line-height: var(--p95-font-line-height-cell); text-transform: uppercase; color: var(--p95-text-hot); }
+h1, h2, h3, h4, h5, h6 { margin-block: var(--p95-space-24) var(--p95-space-8); }
+p, ul, ol, dl, pre, blockquote, table, fieldset, figure { margin-block: 0 var(--p95-space-16); }
+small { font-family: var(--p95-font-family-small); font-size: var(--p95-font-size-14); }
+b, strong { font-weight: inherit; color: var(--p95-text-hot); }   /* no bold: emphasis = brighter */
+i, em { font-style: normal; text-decoration: underline; text-underline-offset: 3px; }
+mark { background: var(--p95-select-bg); color: var(--p95-select-fg); }
+abbr[title] { text-decoration: underline dotted; }
+blockquote { padding-inline-start: var(--p95-space-16); box-shadow: inset 2px 0 0 var(--p95-border-default); color: var(--p95-text-secondary); }
+ul, ol { padding-inline-start: var(--p95-space-24); }
+li::marker { color: var(--p95-text-secondary); }
+hr { border: 0; height: var(--p95-border-width-bevel); box-shadow: inset 0 1px 0 var(--p95-bevel-shadow), inset 0 -1px 0 var(--p95-bevel-hi); margin-block: var(--p95-space-16); }
+
+a { color: var(--p95-text-link); text-decoration: underline; text-underline-offset: 3px; }
+a:hover { color: var(--p95-text-hot); text-shadow: var(--p95-glow-hot); }
+a { transition: text-shadow var(--p95-duration-decay) cubic-bezier(0.2, 0, 0, 1); }
+
+code, kbd, samp, pre { font-family: var(--p95-font-family-mono); font-size: var(--p95-font-size-16); line-height: var(--p95-font-line-height-cell); }
+code { color: var(--p95-text-hot); }
+kbd { display: inline-block; padding: 0 var(--p95-space-4); background: var(--p95-fill-solid); color: var(--p95-text-inverse); }
+pre { padding: var(--p95-space-8); background: var(--p95-surface-base); box-shadow: var(--p95-bevel-sunken); overflow: auto; }
+pre code { color: inherit; }
+
+/* ---------------------------------------------------------------- focus */
+:focus-visible { outline: var(--p95-border-width-hair) dotted var(--p95-border-focus); outline-offset: 2px; }
+
+/* ---------------------------------------------------------------- buttons */
+button, input[type="button"], input[type="submit"], input[type="reset"] {
+  appearance: none;
+  min-height: var(--p95-button-height);
+  min-width: var(--p95-button-min-width);
+  padding: 0 var(--p95-button-padding-x);
+  border: 0;
+  border-radius: 0;
+  background: var(--p95-button-face);
+  color: var(--p95-button-text);
+  box-shadow: var(--p95-bevel-raised);
+  font-family: var(--p95-font-family-ui);
+  font-size: var(--p95-font-size-16);
+  line-height: var(--p95-font-line-height-cell);
+  cursor: pointer;
+  transition: text-shadow var(--p95-duration-decay) cubic-bezier(0.2, 0, 0, 1);
+}
+button:hover:not(:disabled), input[type="button"]:hover:not(:disabled), input[type="submit"]:hover:not(:disabled) {
+  background: var(--p95-button-face-hover);
+  color: var(--p95-button-text-hover);
+  transition-duration: 0s;
+}
+button:active:not(:disabled), input[type="button"]:active:not(:disabled), input[type="submit"]:active:not(:disabled) {
+  background: var(--p95-button-face-pressed);
+  box-shadow: var(--p95-bevel-pressed);
+  padding-block-start: 1px; padding-inline-start: calc(var(--p95-button-padding-x) + 1px);  /* 1px content shift */
+}
+button:focus-visible, input[type="button"]:focus-visible, input[type="submit"]:focus-visible { outline-offset: var(--p95-focus-offset); }
+button:disabled, input:disabled, select:disabled, textarea:disabled {
+  color: var(--p95-text-disabled);
+  cursor: not-allowed;
+  border-style: var(--p95-disabled-border-style);
+}
+input[type="submit"] { box-shadow: var(--p95-frame-default), var(--p95-bevel-raised); }
+
+/* ---------------------------------------------------------------- fields */
+input:not([type="checkbox"], [type="radio"], [type="range"], [type="button"], [type="submit"], [type="reset"], [type="color"], [type="file"]),
+textarea, select {
+  appearance: none;
+  min-height: var(--p95-field-height);
+  padding: var(--p95-space-4) calc(var(--p95-field-padding-x) + var(--p95-border-width-bevel));
+  border: 0;
+  border-radius: 0;
+  background: var(--p95-field-bg);
+  color: var(--p95-field-text);
+  box-shadow: var(--p95-bevel-sunken);
+  caret-color: var(--p95-field-caret);
+  line-height: var(--p95-font-line-height-cell);
+}
+textarea { resize: vertical; font-family: var(--p95-font-family-mono); }
+::placeholder { color: var(--p95-field-placeholder); opacity: 1; }
+input:focus-visible, textarea:focus-visible, select:focus-visible { outline-offset: var(--p95-focus-offset); }
+input:disabled, textarea:disabled, select:disabled { background: var(--p95-field-bg-disabled); color: var(--p95-field-text-disabled); }
+input[aria-invalid="true"], textarea[aria-invalid="true"] {
+  box-shadow: var(--p95-bevel-sunken), 0 0 0 1px var(--p95-field-invalid-border);
+}
+select {
+  padding-inline-end: calc(var(--p95-size-control-sm) + var(--p95-space-4));
+  /* A flat face "button" on the right with a pixel arrow (per-theme image from the build). */
+  background:
+    var(--p95-img-arrow-down) no-repeat right 8px center / 7px 4px,
+    linear-gradient(var(--p95-button-face), var(--p95-button-face)) no-repeat right 2px top 2px / 20px calc(100% - 4px),
+    var(--p95-field-bg);
+  cursor: pointer;
+}
+select:disabled { background: var(--p95-img-arrow-down-disabled) no-repeat right 8px center / 7px 4px, var(--p95-field-bg-disabled); }
+
+/* ---------------------------------------------------------------- check / radio */
+/* Glyphs are pixel-art masks (generated into masks.css), coloured by tokens. */
+input[type="checkbox"], input[type="radio"] {
+  appearance: none;
+  position: relative;
+  flex: none;
+  width: var(--p95-check-size);
+  height: var(--p95-check-size);
+  vertical-align: -3px;
+  cursor: pointer;
+}
+input[type="checkbox"] { background: var(--p95-check-bg); box-shadow: var(--p95-bevel-sunken); }
+input[type="checkbox"]:checked::after {
+  content: ""; position: absolute; inset: 0;
+  background: var(--p95-check-mark);
+  mask: var(--p95-mask-check) center / 8px 8px no-repeat;
+}
+input[type="checkbox"]:indeterminate::after { content: ""; position: absolute; inset: 6px 4px; background: var(--p95-check-mark); }
+/* Radio: a round pixel well. Top-left half of the ring is shadow, bottom-right is hi (sunken). */
+input[type="radio"] {
+  background: linear-gradient(135deg, var(--p95-bevel-shadow) 50%, var(--p95-bevel-hi) 50%);
+  mask: var(--p95-mask-radio-ring) center / 16px 16px no-repeat;
+}
+input[type="radio"]::before {
+  content: ""; position: absolute; inset: 0;
+  background: var(--p95-check-bg);
+  mask: var(--p95-mask-radio-well) center / 16px 16px no-repeat;
+}
+input[type="radio"]:checked::after {
+  content: ""; position: absolute; inset: 0;
+  background: var(--p95-check-mark);
+  mask: var(--p95-mask-radio-dot) center / 16px 16px no-repeat;
+}
+input[type="checkbox"]:disabled, input[type="radio"]:disabled { cursor: not-allowed; }
+input[type="checkbox"]:disabled::after, input[type="radio"]:disabled::after { background: var(--p95-check-mark-disabled); }
+input[type="checkbox"]:focus-visible { outline-offset: 1px; }
+/* A mask clips outlines, so radio focus goes on its label (see .p95-radio) or a sibling. */
+input[type="radio"]:focus-visible { outline: none; }
+input[type="radio"]:focus-visible::before { background: var(--p95-surface-face-hover); }
+
+/* ---------------------------------------------------------------- range, progress, meter */
+input[type="range"] { appearance: none; background: transparent; height: var(--p95-size-control-sm); cursor: pointer; accent-color: var(--p95-slider-fill); }
+input[type="range"]::-webkit-slider-runnable-track { height: calc(var(--p95-slider-track-height) + 4px); background: var(--p95-slider-track); box-shadow: var(--p95-bevel-sunken); }
+input[type="range"]::-moz-range-track { height: calc(var(--p95-slider-track-height) + 4px); background: var(--p95-slider-track); box-shadow: var(--p95-bevel-sunken); }
+input[type="range"]::-moz-range-progress { height: calc(var(--p95-slider-track-height) + 4px); background: var(--p95-slider-fill); }
+input[type="range"]::-webkit-slider-thumb { appearance: none; width: 12px; height: 20px; margin-top: -6px; border: 0; border-radius: 0; background: var(--p95-slider-thumb); box-shadow: var(--p95-bevel-raised); }
+input[type="range"]::-moz-range-thumb { width: 12px; height: 20px; border: 0; border-radius: 0; background: var(--p95-slider-thumb); box-shadow: var(--p95-bevel-raised); }
+
+progress, meter {
+  appearance: none;
+  display: inline-block;
+  width: 100%;
+  height: calc(var(--p95-progress-height) + 4px);
+  border: 0;
+  padding: var(--p95-border-width-bevel);
+  background: var(--p95-progress-track);
+  box-shadow: var(--p95-bevel-sunken);
+  vertical-align: middle;
+}
+/* Segmented fill: 8px blocks with 2px gaps (the boot-screen bar). */
+progress { --_seg: repeating-linear-gradient(90deg, var(--p95-progress-fill) 0 var(--p95-progress-segment-width), transparent 0 calc(var(--p95-progress-segment-width) + var(--p95-progress-segment-gap))); color: var(--p95-progress-fill); }
+progress::-webkit-progress-bar { background: transparent; }
+progress::-webkit-progress-value { background: var(--_seg); }
+progress::-moz-progress-bar { background: var(--_seg); }
+progress:not([value])::-webkit-progress-bar { background: var(--_seg) 0 0 / 30% 100% no-repeat; }
+meter::-webkit-meter-bar { background: transparent; border: 0; border-radius: 0; height: 100%; }
+meter::-webkit-meter-optimum-value { background: var(--p95-fill-solid); }
+meter::-webkit-meter-suboptimum-value { background: var(--p95-status-warn-fg); }
+meter::-webkit-meter-even-less-good-value { background: var(--p95-status-error-fg); }
+meter::-moz-meter-bar { background: var(--p95-fill-solid); }
+meter:-moz-meter-sub-optimum::-moz-meter-bar { background: var(--p95-status-warn-fg); }
+meter:-moz-meter-sub-sub-optimum::-moz-meter-bar { background: var(--p95-status-error-fg); }
+
+/* ---------------------------------------------------------------- containers */
+fieldset {
+  padding: var(--p95-space-16) var(--p95-space-8) var(--p95-space-8);
+  border: 0;
+  box-shadow: var(--p95-bevel-etched);
+  margin-inline: 0;
+}
+legend { padding: 0 var(--p95-space-4); background: var(--p95-surface-face); color: var(--p95-text-primary); line-height: var(--p95-font-line-height-cell); margin-block-end: calc(-1 * var(--p95-space-8)); }
+fieldset legend { float: left; margin-block-start: calc(-1 * var(--p95-space-24)); }
+fieldset legend + * { clear: left; }
+
+details { box-shadow: var(--p95-bevel-raised); background: var(--p95-surface-face); }
+summary {
+  display: flex; align-items: center; gap: var(--p95-space-8);
+  min-height: var(--p95-size-control-sm); padding: var(--p95-space-4) var(--p95-space-8);
+  cursor: pointer; list-style: none; text-transform: uppercase;
+}
+summary::-webkit-details-marker { display: none; }
+summary::before { content: "►"; color: var(--p95-text-secondary); }
+details[open] > summary::before { content: "▼"; color: var(--p95-text-primary); }
+summary:hover { background: var(--p95-surface-face-hover); color: var(--p95-text-hot); }
+summary:focus-visible { outline-offset: var(--p95-focus-offset); }
+details > :not(summary) { padding: var(--p95-space-8); }
+details[open] > summary { box-shadow: inset 0 -1px 0 var(--p95-border-subtle); }
+
+dialog {
+  margin: auto;   /* the reset zeroes margins; modal centring relies on margin: auto */
+  border: 0; padding: 0; color: var(--p95-text-primary);
+  background: var(--p95-window-bg);
+  box-shadow: var(--p95-bevel-raised);
+  min-width: 320px;
+}
+dialog::backdrop { background: var(--p95-surface-overlay); }
+/* Author display rules (e.g. .p95-window's flex) would otherwise beat the UA's hidden state. */
+dialog:not([open]) { display: none !important; }
+
+/* ---------------------------------------------------------------- tables */
+table { border-collapse: collapse; background: var(--p95-list-bg); box-shadow: var(--p95-bevel-sunken); }
+th, td { padding: var(--p95-space-4) var(--p95-list-cell-padding-x); text-align: start; line-height: var(--p95-font-line-height-cell); }
+thead th { background: var(--p95-list-header-bg); color: var(--p95-list-header-fg); box-shadow: var(--p95-bevel-raised); font-weight: inherit; text-transform: uppercase; }
+tbody tr:hover { background: var(--p95-list-row-hover-bg); color: var(--p95-text-hot); }
+td:first-child, th:first-child { padding-inline-start: calc(var(--p95-list-cell-padding-x) + var(--p95-border-width-bevel)); }
+tbody tr:last-child td { padding-block-end: calc(var(--p95-space-4) + var(--p95-border-width-bevel)); }
+caption { caption-side: top; text-align: start; padding-block-end: var(--p95-space-4); color: var(--p95-text-secondary); }

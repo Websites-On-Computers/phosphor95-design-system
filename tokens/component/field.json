@@ -1,0 +1,42 @@
+{
+  "field": {
+    "$description": "Text field, textarea, select, spin box: sunken bevel around a base-coloured well.",
+    "$type": "color",
+    "bg": {
+      "$value": "{surface.base}"
+    },
+    "text": {
+      "$value": "{text.primary}"
+    },
+    "placeholder": {
+      "$value": "{text.secondary}"
+    },
+    "bg-disabled": {
+      "$value": "{surface.face}"
+    },
+    "text-disabled": {
+      "$value": "{text.disabled}"
+    },
+    "caret": {
+      "$value": "{text.hot}",
+      "$description": "Block caret, blinks at duration.blink"
+    },
+    "selection-bg": {
+      "$value": "{select.bg}"
+    },
+    "selection-fg": {
+      "$value": "{select.fg}"
+    },
+    "invalid-border": {
+      "$value": "{status.error.border}"
+    },
+    "height": {
+      "$type": "dimension",
+      "$value": "{size.control.sm}"
+    },
+    "padding-x": {
+      "$type": "dimension",
+      "$value": "{space.4}"
+    }
+  }
+}

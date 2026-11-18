@@ -1,0 +1,7 @@
+/* Phosphor95 fonts. Licenses: PxPlus (CC BY-SA 4.0, VileR / int10h.org), VT323 and W95FA (SIL OFL 1.1).
+   Shipped as the original TTF/OTF; the binaries are unmodified. */
+@font-face { font-family: "PxPlus IBM VGA 8x16"; src: url("fonts/PxPlus_IBM_VGA_8x16.ttf") format("truetype"); font-display: block; }
+@font-face { font-family: "PxPlus IBM VGA 8x14"; src: url("fonts/PxPlus_IBM_VGA_8x14.ttf") format("truetype"); font-display: block; }
+@font-face { font-family: "PxPlus IBM VGA 9x16"; src: url("fonts/PxPlus_IBM_VGA_9x16.ttf") format("truetype"); font-display: block; }
+@font-face { font-family: "VT323"; src: url("fonts/VT323-Regular.ttf") format("truetype"); font-display: swap; }
+@font-face { font-family: "W95FA"; src: url("fonts/W95F.otf") format("opentype"); font-display: swap; }

@@ -1,0 +1,57 @@
+{
+  "list": {
+    "$description": "List, table, tree. Bodies sit in a sunken base well.",
+    "$type": "color",
+    "bg": {
+      "$value": "{surface.base}"
+    },
+    "text": {
+      "$value": "{text.primary}"
+    },
+    "row-alt-bg": {
+      "$value": "{surface.sunken}",
+      "$description": "Zebra rows (optional)"
+    },
+    "row-hover-bg": {
+      "$value": "{surface.face-hover}"
+    },
+    "row-selected-bg": {
+      "$value": "{select.bg}"
+    },
+    "row-selected-fg": {
+      "$value": "{select.fg}"
+    },
+    "row-selected-inactive-bg": {
+      "$value": "{select.inactive-bg}"
+    },
+    "row-selected-inactive-fg": {
+      "$value": "{select.inactive-fg}"
+    },
+    "header-bg": {
+      "$value": "{surface.face}"
+    },
+    "header-fg": {
+      "$value": "{text.primary}"
+    },
+    "header-rule": {
+      "$value": "{border.strong}"
+    },
+    "row-height": {
+      "$type": "dimension",
+      "$value": "{size.control.sm}"
+    },
+    "cell-padding-x": {
+      "$type": "dimension",
+      "$value": "{space.8}"
+    },
+    "indent": {
+      "$type": "dimension",
+      "$value": "{space.16}",
+      "$description": "Tree level indent (2 cells; TUI: 2 columns)"
+    },
+    "guide": {
+      "$value": "{border.subtle}",
+      "$description": "Tree guide lines (decorative)"
+    }
+  }
+}

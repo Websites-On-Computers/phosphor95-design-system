@@ -1,0 +1,30 @@
+{
+  "check": {
+    "$description": "Checkbox and radio: 16px sunken well; mark in primary text. Switch: a two-cell segmented track.",
+    "$type": "color",
+    "bg": {
+      "$value": "{surface.base}"
+    },
+    "mark": {
+      "$value": "{text.primary}"
+    },
+    "mark-disabled": {
+      "$value": "{text.disabled}"
+    },
+    "switch-on-bg": {
+      "$value": "{fill.solid}"
+    },
+    "switch-off-bg": {
+      "$value": "{surface.sunken}"
+    },
+    "size": {
+      "$type": "dimension",
+      "$value": "{size.icon.sm}"
+    },
+    "switch-segment-width": {
+      "$type": "dimension",
+      "$value": "{space.24}",
+      "$description": "Each half of the two-cell switch track"
+    }
+  }
+}

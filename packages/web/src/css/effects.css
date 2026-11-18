@@ -1,0 +1,55 @@
+/* Phosphor95 effects: all opt-in, all cheap (no blur filters; the reference machine is a
+   2015 MacBook Air). Animated effects stop under prefers-reduced-motion. */
+
+/* Text glow: phosphor bloom on text. */
+.p95-glow { text-shadow: var(--p95-glow); }
+.p95-glow-hot { color: var(--p95-text-hot); text-shadow: var(--p95-glow-hot); }
+
+/* Block cursor after an element's text. */
+.p95-cursor::after {
+  content: "█"; margin-inline-start: 0.1em; color: var(--p95-text-hot);
+  animation: p95-blink calc(var(--p95-duration-blink) * 2) steps(1) infinite;
+}
+@keyframes p95-blink { 50% { opacity: 0; } }
+
+/* Scanlines: one dark row every scanline-period. A pointer-transparent overlay. */
+.p95-scanlines, .p95-crt { position: relative; isolation: isolate; }
+.p95-scanlines::after, .p95-crt::after {
+  content: ""; position: absolute; inset: 0; z-index: var(--p95-layer-overlay); pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0 calc(var(--p95-effect-size-scanline-period) / 2),
+    color-mix(in srgb, var(--p95-surface-void) calc(var(--p95-effect-scanline-opacity) * 100%), transparent) 0 var(--p95-effect-size-scanline-period));
+}
+
+/* CRT: scanlines + vignette + a slow, tiny brightness flicker (far below any flash threshold). */
+.p95-crt::before {
+  content: ""; position: absolute; inset: 0; z-index: var(--p95-layer-overlay); pointer-events: none;
+  background: radial-gradient(ellipse at center, transparent 55%,
+    color-mix(in srgb, var(--p95-surface-void) calc(var(--p95-effect-vignette) * 100%), transparent) 100%);
+}
+.p95-crt { animation: p95-flicker 4s steps(8) infinite; }
+@keyframes p95-flicker {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(calc(1 - var(--p95-effect-flicker))); }
+}
+.p95-crt-fixed::after, .p95-crt-fixed::before { position: fixed; }
+
+/* Digital rain host. <p95-rain> draws on a canvas sized to its box. */
+p95-rain { display: block; position: absolute; inset: 0; z-index: -1; pointer-events: none; overflow: hidden; }
+p95-rain canvas { width: 100%; height: 100%; image-rendering: pixelated; }
+
+/* Phosphor decay: glow lingers briefly after hover leaves (transition only on the way out). */
+.p95-decay { transition: text-shadow var(--p95-duration-decay) cubic-bezier(0.2, 0, 0, 1), color var(--p95-duration-decay) cubic-bezier(0.2, 0, 0, 1); }
+.p95-decay:hover { transition-duration: 0s; text-shadow: var(--p95-glow-hot); color: var(--p95-text-hot); }
+
+@media (prefers-reduced-motion: reduce) {
+  .p95-crt, .p95-cursor::after, .p95-spinner > [aria-hidden]::before { animation: none !important; }
+  * { transition-duration: 0s !important; }
+}
+@media (prefers-reduced-transparency: reduce) {
+  .p95-crt::before { display: none; }
+}
+@media (forced-colors: active) {
+  .p95-scanlines::after, .p95-crt::after, .p95-crt::before { display: none; }
+}

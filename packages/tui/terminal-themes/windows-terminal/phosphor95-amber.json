@@ -1,0 +1,23 @@
+{
+  "name": "Phosphor95 Amber",
+  "background": "#0b0702",
+  "foreground": "#ffb000",
+  "cursorColor": "#ffe7c4",
+  "selectionBackground": "#ffb000",
+  "black": "#0b0702",
+  "brightBlack": "#624412",
+  "red": "#ff3b3b",
+  "brightRed": "#ff7a6b",
+  "green": "#ffb000",
+  "brightGreen": "#ffd9a2",
+  "yellow": "#cfd7df",
+  "brightYellow": "#e7ebee",
+  "blue": "#af7d29",
+  "brightBlue": "#ce9533",
+  "purple": "#ffc6bf",
+  "brightPurple": "#ffd4ce",
+  "cyan": "#b5dbff",
+  "brightCyan": "#c6e3ff",
+  "white": "#ffe7c4",
+  "brightWhite": "#fff6e9"
+}

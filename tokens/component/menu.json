@@ -1,0 +1,35 @@
+{
+  "menu": {
+    "$description": "Menubar, dropdown, context menu. Hovered item = inverted selection.",
+    "$type": "color",
+    "bg": {
+      "$value": "{surface.face}"
+    },
+    "text": {
+      "$value": "{text.primary}"
+    },
+    "item-hover-bg": {
+      "$value": "{select.bg}"
+    },
+    "item-hover-fg": {
+      "$value": "{select.fg}"
+    },
+    "text-disabled": {
+      "$value": "{text.disabled}"
+    },
+    "shortcut": {
+      "$value": "{text.secondary}"
+    },
+    "separator": {
+      "$value": "{border.subtle}"
+    },
+    "item-height": {
+      "$type": "dimension",
+      "$value": "{size.control.sm}"
+    },
+    "padding-x": {
+      "$type": "dimension",
+      "$value": "{space.16}"
+    }
+  }
+}

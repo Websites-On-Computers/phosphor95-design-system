@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en" data-theme="green">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phosphor95 Gallery</title>
+<meta name="description" content="Phosphor95 design system: every component, every theme.">
+<link rel="icon" href="web/brand/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" href="web/brand/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="web/brand/icon-180.png">
+<link rel="stylesheet" href="web/p95.css">
+<link rel="stylesheet" href="gallery.css">
+<script type="module" src="gallery.js"></script>
+</head>
+<body>
+<a class="skip p95-btn" href="#main">Skip to content</a>
+
+<header class="hero">
+  <p95-rain density="0.4"></p95-rain>
+  <div class="hero-inner">
+    <div class="lockup">
+      <p95-operator size="2" framed label="The Operator"></p95-operator>
+      <div>
+        <p95-wordmark size="4"></p95-wordmark>
+        <p class="p95-upper p95-text-secondary tagline">DESIGN SYSTEM // WIN95 STRUCTURE ON A GREEN PHOSPHOR CRT</p>
+      </div>
+    </div>
+    <div class="controls p95-panel">
+      <div class="p95-row">
+        <span class="p95-upper">Theme</span>
+        <div class="p95-segmented" role="group" aria-label="Theme" id="themes">
+          <button class="p95-btn" aria-pressed="true" data-theme-set="green">Green</button>
+          <button class="p95-btn" aria-pressed="false" data-theme-set="amber">Amber</button>
+          <button class="p95-btn" aria-pressed="false" data-theme-set="white">White</button>
+          <button class="p95-btn" aria-pressed="false" data-theme-set="hc">HC</button>
+        </div>
+      </div>
+      <div class="p95-row">
+        <span class="p95-upper" id="crt-label">CRT</span>
+        <button class="p95-switch" aria-checked="false" aria-labelledby="crt-label" id="crt" data-off="OFF" data-on="ON"></button>
+        <span class="p95-text-secondary p95-small">Press <kbd>Ctrl+K</kbd> for commands</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="toc p95-statusbar" aria-label="Sections">
+  <a href="#brand">Brand</a><a href="#color">Color</a><a href="#type">Type</a><a href="#actions">Actions</a>
+  <a href="#inputs">Inputs</a><a href="#containers">Containers</a><a href="#navigation">Navigation</a>
+  <a href="#data">Data</a><a href="#feedback">Feedback</a><a href="#terminal">Terminal</a>
+</nav>
+
+<main id="main">
+
+<!-- =============================================================== BRAND -->
+<section id="brand" aria-labelledby="h-brand">
+  <h2 id="h-brand">Brand</h2>
+  <p class="lede">The Operator is the lock-screen avatar: 48×48 pixel art, scaled by whole multiples only. It recolours with the theme.</p>
+  <div class="p95-row p95-gap-24 operators">
+    <figure><p95-operator size="1" label="Operator 1x"></p95-operator><figcaption>1x · 48</figcaption></figure>
+    <figure><p95-operator size="2" label="Operator 2x"></p95-operator><figcaption>2x · 96</figcaption></figure>
+    <figure><p95-operator size="3" state="thinking" label="Operator thinking"></p95-operator><figcaption>3x · thinking</figcaption></figure>
+    <figure><p95-operator size="2" framed label="Operator mark"></p95-operator><figcaption>Mark</figcaption></figure>
+  </div>
+  <div class="p95-row p95-gap-24">
+    <p95-wordmark size="1"></p95-wordmark>
+    <p95-wordmark size="2"></p95-wordmark>
+    <p95-wordmark size="3"></p95-wordmark>
+  </div>
+</section>
+
+<!-- =============================================================== COLOR -->
+<section id="color" aria-labelledby="h-color">
+  <h2 id="h-color">Color</h2>
+  <p class="lede">One 12-step phosphor ramp per theme; every step has one job. Status hues are the only extra colour, and always come with a tag.</p>
+  <div class="swatches" id="ramp" aria-label="Theme ramp"></div>
+  <div class="swatches status" id="status" aria-label="Status colours"></div>
+</section>
+
+<!-- =============================================================== TYPE -->
+<section id="type" aria-labelledby="h-type">
+  <h2 id="h-type">Type</h2>
+  <div class="p95-stack">
+    <h1 class="specimen">Heading 1</h1>
+    <h2 class="specimen">Heading 2 · VT323 48</h2>
+    <h3 class="specimen">Heading 3 · VT323 32</h3>
+    <h4 class="specimen">Label · PxPlus 16 uppercase</h4>
+    <p>Body text is PxPlus IBM VGA 8x16 at its native 16px, with a 24px line for prose. Pixel fonts have no bold: <strong>emphasis is brighter</strong>, <em>or underlined</em>, or <mark>inverted</mark>. Links look <a href="#type">like this</a>.</p>
+    <p class="p95-text-secondary">Secondary text, hints and placeholders use step 8 and still meet 4.5:1.</p>
+    <p><small>Small text is PxPlus 8x14 at 14px.</small> Code is <code>PxPlus 9x16</code>; keys are <kbd>Ctrl+Alt+M</kbd>.</p>
+  </div>
+</section>
+
+<!-- =============================================================== ACTIONS -->
+<section id="actions" aria-labelledby="h-actions">
+  <h2 id="h-actions">Actions</h2>
+  <div class="demo-grid">
+    <div class="demo">
+      <h4>Button</h4>
+      <div class="p95-row">
+        <button class="p95-btn" data-default>OK</button>
+        <button class="p95-btn">Cancel</button>
+        <button class="p95-btn" data-variant="primary">Run</button>
+        <button class="p95-btn" disabled>Disabled</button>
+      </div>
+    </div>
+    <div class="demo">
+      <h4>Flat / icon / toggle</h4>
+      <div class="p95-row">
+        <button class="p95-btn" data-variant="flat">Flat</button>
+        <button class="p95-btn" data-variant="icon" aria-label="Open folder"><img src="web/icons/16/folder-open.png" alt=""></button>
+        <button class="p95-btn" data-variant="icon flat" aria-label="Search"><img src="web/icons/16/search.png" alt=""></button>
+        <button class="p95-btn" aria-pressed="true" data-toggle>Stream</button>
+        <div class="p95-segmented" role="group" aria-label="Alignment">
+          <button class="p95-btn" aria-pressed="true" data-toggle-group>Left</button>
+          <button class="p95-btn" aria-pressed="false" data-toggle-group>Center</button>
+          <button class="p95-btn" aria-pressed="false" data-toggle-group>Right</button>
+        </div>
+      </div>
+    </div>
+    <div class="demo">
+      <h4>Link</h4>
+      <p><a class="p95-link" href="#actions">Open the uplink settings</a> · plain <a href="#actions">anchor</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- =============================================================== INPUTS -->
+<section id="inputs" aria-labelledby="h-inputs">
+  <h2 id="h-inputs">Inputs</h2>
+  <div class="demo-grid">
+    <div class="demo p95-stack">
+      <h4>Text field / select / textarea</h4>
+      <label class="field"><span>Model endpoint</span><input class="p95-field" value="http://localhost:11434"></label>
+      <label class="field"><span>Port</span><input class="p95-field" aria-invalid="true" aria-describedby="port-err" value="99999"></label>
+      <p class="help p95-text-error" id="port-err">[ERR ] PORT MUST BE 1–65535</p>
+      <label class="field"><span>Engine</span><select class="p95-select"><option>local/qwen</option><option>remote/claude</option></select></label>
+      <label class="field"><span>Disabled</span><input class="p95-field" disabled value="read only"></label>
+      <label class="field"><span>Notes</span><textarea class="p95-field" placeholder="Type notes"></textarea></label>
+    </div>
+    <div class="demo p95-stack">
+      <h4>Check / radio / switch</h4>
+      <label class="p95-check"><input type="checkbox" checked> Stream tokens</label>
+      <label class="p95-check"><input type="checkbox"> Log to disk</label>
+      <label class="p95-check"><input type="checkbox" disabled> Disabled option</label>
+      <label class="p95-radio"><input type="radio" name="mode" checked> Text</label>
+      <label class="p95-radio"><input type="radio" name="mode"> Voice</label>
+      <div class="p95-row"><span id="sw-l">Wake word</span><button class="p95-switch" aria-checked="true" aria-labelledby="sw-l"></button></div>
+    </div>
+    <div class="demo p95-stack">
+      <h4>Slider / spin / search</h4>
+      <label class="field"><span>Temperature <output id="temp-out">62</output></span><input type="range" class="p95-slider" value="62" id="temp"></label>
+      <div class="p95-row"><span>Threads</span>
+        <div class="p95-spin"><input type="number" class="p95-field" value="4" min="1" max="8" id="spin" aria-label="Threads"><button aria-label="Decrease" data-spin="-1">−</button><button aria-label="Increase" data-spin="1">+</button></div>
+      </div>
+      <div role="search" class="p95-search"><input type="search" class="p95-field" placeholder="Search logs" aria-label="Search logs"><span class="p95-search-count">12</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================================================== CONTAINERS -->
+<section id="containers" aria-labelledby="h-containers">
+  <h2 id="h-containers">Containers</h2>
+  <div class="demo-grid wide">
+    <section class="p95-window" data-active aria-labelledby="w1-title">
+      <header class="p95-titlebar">
+        <img src="web/icons/16/terminal.png" alt="">
+        <h3 class="p95-titlebar-title" id="w1-title">SYS.TERMINAL – Properties</h3>
+        <div class="p95-titlebar-controls">
+          <button data-action="minimize" aria-label="Minimize"></button>
+          <button data-action="maximize" aria-label="Maximize"></button>
+          <button data-action="close" aria-label="Close"></button>
+        </div>
+      </header>
+      <nav class="p95-menubar" role="menubar" aria-label="Window menu">
+        <button role="menuitem" id="m-file">File</button>
+        <button role="menuitem" id="m-edit">Edit</button>
+        <button role="menuitem" id="m-view">View</button>
+      </nav>
+      <p95-menu for="m-file">
+        <button role="menuitem">New window <kbd>Ctrl+N</kbd></button>
+        <button role="menuitem">Open… <kbd>Ctrl+O</kbd></button>
+        <hr>
+        <button role="menuitem" aria-disabled="true">Print</button>
+        <button role="menuitem">Exit</button>
+      </p95-menu>
+      <p95-menu for="m-edit">
+        <button role="menuitem">Copy <kbd>Ctrl+C</kbd></button>
+        <button role="menuitem">Paste <kbd>Ctrl+V</kbd></button>
+      </p95-menu>
+      <p95-menu for="m-view">
+        <button role="menuitemcheckbox" aria-checked="true">Status bar</button>
+        <button role="menuitemcheckbox" aria-checked="false">Scanlines</button>
+      </p95-menu>
+      <div class="p95-window-body">
+        <p95-tabs>
+          <div role="tablist" aria-label="Properties">
+            <button role="tab" aria-selected="true">General</button>
+            <button role="tab">Network</button>
+            <button role="tab">Display</button>
+          </div>
+          <section role="tabpanel">
+            <fieldset class="p95-group">
+              <legend>Models</legend>
+              <table class="p95-table">
+                <thead><tr><th>Model</th><th>State</th></tr></thead>
+                <tbody>
+                  <tr><td>qwen2.5-7b</td><td>ONLINE</td></tr>
+                  <tr aria-selected="true"><td>llama3-8b</td><td>STANDBY</td></tr>
+                  <tr><td>phi-3</td><td>OFFLINE</td></tr>
+                </tbody>
+              </table>
+            </fieldset>
+            <div class="p95-progress-label"><span>Uplink</span><span>62%</span></div>
+            <progress class="p95-progress" value="62" max="100" aria-label="Uplink"></progress>
+          </section>
+          <section role="tabpanel"><p>Brain: <code>192.0.2.10:8080</code></p></section>
+          <section role="tabpanel"><p>CRT shader on. Scanlines 18%.</p></section>
+        </p95-tabs>
+      </div>
+      <div class="p95-window-buttons">
+        <button class="p95-btn" data-default>OK</button><button class="p95-btn">Cancel</button><button class="p95-btn">Apply</button>
+      </div>
+      <footer class="p95-statusbar">
+        <span class="p95-statusbar-field">Ready</span>
+        <span class="p95-statusbar-field">MBP-PRO</span>
+        <span class="p95-statusbar-field">18:29</span>
+      </footer>
+    </section>
+
+    <div class="p95-stack p95-gap-16">
+      <section class="p95-window" aria-labelledby="w2-title">
+        <header class="p95-titlebar"><h3 class="p95-titlebar-title" id="w2-title">Inactive window</h3>
+          <div class="p95-titlebar-controls"><button data-action="close" aria-label="Close"></button></div></header>
+        <div class="p95-window-body"><p>Inactive title bars use <code>title.inactive.*</code>.</p></div>
+      </section>
+      <details class="p95-accordion"><summary>Advanced</summary><p>Audio context scales with clip length.</p></details>
+      <details class="p95-accordion" open><summary>Network</summary><p>Reconnects every 5 s.</p></details>
+      <div class="p95-split" style="height: 120px">
+        <div class="p95-panel" data-variant="sunken"><p>Left pane</p></div>
+        <div class="p95-splitter" role="separator" tabindex="0" aria-label="Resize panes" aria-valuenow="50"></div>
+        <div class="p95-panel" data-variant="sunken"><p>Right pane. Drag the splitter or use arrow keys.</p></div>
+      </div>
+      <article class="p95-card"><header class="p95-card-head"><img src="web/icons/16/drive.png" alt="" class="p95-pixelated"> Disk</header><p>212 GB free of 256 GB.</p></article>
+      <div class="p95-scroll scroll-demo"><p>Scrollable region with Win95 scrollbars (Chromium) or themed standard scrollbars (Firefox).</p><p>Line</p><p>Line</p><p>Line</p><p>Line</p><p>Line</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================================================== NAVIGATION -->
+<section id="navigation" aria-labelledby="h-navigation">
+  <h2 id="h-navigation">Navigation</h2>
+  <div class="p95-stack p95-gap-16">
+    <nav class="p95-path" aria-label="Breadcrumb"><ol><li><a href="#navigation">Home</a></li><li><a href="#navigation">Pictures</a></li><li><span aria-current="page">Screenshots</span></li></ol></nav>
+    <div class="p95-row">
+      <button class="p95-btn" id="open-palette">Command palette…</button>
+      <div class="context-target p95-panel" data-variant="sunken" tabindex="0">
+        Right-click here (or Shift+F10)
+        <p95-menu data-context>
+          <button role="menuitem">Refresh</button>
+          <button role="menuitem">Properties</button>
+          <hr>
+          <button role="menuitem">Delete</button>
+        </p95-menu>
+      </div>
+    </div>
+    <footer class="p95-statusbar" data-variant="taskbar">
+      <span class="p95-statusbar-field"><strong>START</strong></span>
+      <span class="p95-statusbar-field">TERMINAL-01</span>
+      <span class="p95-statusbar-field">18:29</span>
+    </footer>
+    <footer class="p95-keyhints"><span><kbd>F1</kbd>Help</span><span><kbd>^Q</kbd>Quit</span><span><kbd>Tab</kbd>Next pane</span><span><kbd>/</kbd>Search</span></footer>
+  </div>
+  <p95-palette>
+    <button data-command="theme-green" data-shortcut="1">Theme: green</button>
+    <button data-command="theme-amber" data-shortcut="2">Theme: amber</button>
+    <button data-command="theme-white" data-shortcut="3">Theme: white</button>
+    <button data-command="theme-hc" data-shortcut="4">Theme: high contrast</button>
+    <button data-command="crt">Toggle CRT effects</button>
+    <button data-command="toast">Show a toast</button>
+    <button data-command="alert">Show an alert dialog</button>
+    <button data-command="boot">Replay boot sequence</button>
+  </p95-palette>
+</section>
+
+<!-- =============================================================== DATA -->
+<section id="data" aria-labelledby="h-data">
+  <h2 id="h-data">Data</h2>
+  <div class="demo-grid">
+    <div class="demo"><h4>List</h4>
+      <ul class="p95-list" role="listbox" aria-label="Files">
+        <li role="option"><img src="web/icons/16/folder.png" alt="">Documents <span class="p95-secondary">DIR</span></li>
+        <li role="option" aria-selected="true"><img src="web/icons/16/file.png" alt="">readme.txt <span class="p95-secondary">2 KB</span></li>
+        <li role="option"><img src="web/icons/16/file.png" alt="">palette.toml <span class="p95-secondary">1 KB</span></li>
+        <li role="option" aria-disabled="true"><img src="web/icons/16/lock.png" alt="">locked.bin <span class="p95-secondary">—</span></li>
+      </ul>
+    </div>
+    <div class="demo"><h4>Tree</h4>
+      <ul class="p95-tree" role="tree" aria-label="Folders">
+        <li role="treeitem" aria-expanded="true"><span><img src="web/icons/16/computer.png" alt="">TERMINAL-01</span>
+          <ul role="group">
+            <li role="treeitem" aria-expanded="true"><span><img src="web/icons/16/drive.png" alt="">C:</span>
+              <ul role="group">
+                <li role="treeitem" aria-selected="true"><span><img src="web/icons/16/folder.png" alt="">PHOSPHOR</span></li>
+                <li role="treeitem" aria-expanded="false"><span><img src="web/icons/16/folder.png" alt="">MODELS</span><ul role="group"><li role="treeitem"><span>whisper</span></li></ul></li>
+              </ul>
+            </li>
+            <li role="treeitem"><span><img src="web/icons/16/network.png" alt="">Network</span></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="demo"><h4>Key-value</h4>
+      <dl class="p95-kv">
+        <dt class="p95-kv-group">System</dt>
+        <dt>Host</dt><dd>terminal-01</dd>
+        <dt>CPU</dt><dd>i5-5250U · 4T</dd>
+        <dt>Memory</dt><dd>7.2 GB</dd>
+        <dt>Uplink</dt><dd>192.0.2.10</dd>
+      </dl>
+    </div>
+  </div>
+  <div class="demo-grid">
+    <div class="demo"><h4>Log viewer</h4>
+<pre class="p95-log" role="log"><span><time>18:29:01</time><span class="p95-text-ok">[ OK ]</span> NETWORK UP</span><span><time>18:29:02</time><span class="p95-text-info">[INFO]</span> WHISPER BASE.EN LOADED 0.15 S</span><span><time>18:29:07</time><span class="p95-text-warn">[WARN]</span> CPU 95 °C. THROTTLING</span><span><time>18:29:09</time><span class="p95-text-error">[ERR ]</span> BRAIN UNREACHABLE</span></pre>
+    </div>
+    <div class="demo"><h4>Code</h4>
+<pre class="p95-code" data-lang="rust" data-lines><code><span><span class="com">// say hello</span></span><span><span class="kw">fn</span> main() {</span><span>    <span class="kw">let</span> n = <span class="num">42</span>;</span><span>    println!(<span class="str">"[ OK ] {n}"</span>);</span><span>}</span></code></pre>
+    </div>
+    <div class="demo"><h4>Diff</h4>
+<pre class="p95-diff"><span class="p95-diff-hunk">@@ -1,3 +1,3 @@</span><span>[core]</span><del>face = "<mark>#0a2412</mark>"</del><ins>face = "<mark>#0b2614</mark>"</ins><span>shadow = "#041208"</span></pre>
+    </div>
+  </div>
+</section>
+
+<!-- =============================================================== FEEDBACK -->
+<section id="feedback" aria-labelledby="h-feedback">
+  <h2 id="h-feedback">Feedback</h2>
+  <div class="demo-grid">
+    <div class="demo p95-stack">
+      <h4>Progress / meter / spinner</h4>
+      <div class="p95-progress-label"><span>Indexing</span><span>1,204/5,000</span></div>
+      <progress class="p95-progress" value="24" max="100" aria-label="Indexing"></progress>
+      <div class="p95-progress-label"><span>Disk</span><span>83%</span></div>
+      <meter class="p95-meter" value="0.83" low="0.7" high="0.9" optimum="0.2" aria-label="Disk"></meter>
+      <span class="p95-spinner" role="status"><span aria-hidden="true"></span>Transcribing</span>
+      <span class="p95-spinner" data-variant="blocks" role="status"><span aria-hidden="true"></span>Loading models</span>
+    </div>
+    <div class="demo p95-stack">
+      <h4>Badges / boot lines</h4>
+      <div class="p95-row">
+        <span class="p95-badge" data-level="ok"> OK </span>
+        <span class="p95-badge" data-level="info">INFO</span>
+        <span class="p95-badge" data-level="warn">WARN</span>
+        <span class="p95-badge" data-level="error">ERR </span>
+        <span class="p95-badge" data-level="warn" data-variant="solid">WARN</span>
+        <span class="p95-badge" data-level="error" data-variant="tint">ERR</span>
+      </div>
+      <div>
+        <div class="p95-bootline" data-level="ok">Memory test 8192K</div>
+        <div class="p95-bootline" data-level="ok">zsh is login shell</div>
+        <div class="p95-bootline" data-level="pending">Loading models 2/5</div>
+        <div class="p95-bootline" data-level="warn">Battery 9%</div>
+        <div class="p95-bootline" data-level="error">Brain unreachable</div>
+      </div>
+    </div>
+    <div class="demo p95-stack">
+      <h4>Toast / alert / tooltip</h4>
+      <div class="p95-row">
+        <button class="p95-btn" data-toast="ok">OK toast</button>
+        <button class="p95-btn" data-toast="warn">Warn toast</button>
+        <button class="p95-btn" data-toast="error">Error toast</button>
+      </div>
+      <div class="p95-row">
+        <button class="p95-btn" id="show-alert">Delete 3 files…</button>
+        <button class="p95-btn" aria-describedby="tip1">Hover me</button>
+        <span class="p95-tooltip" id="tip1">Saves to ~/.local/share/terminal01</span>
+      </div>
+      <p95-dialog id="alert" role="alertdialog" level="warn" title="Delete files">
+        <p><strong>DELETE 3 FILES?</strong></p>
+        <p>This can't be undone.</p>
+        <button value="delete">Delete</button>
+        <button value="cancel" data-default>Cancel</button>
+      </p95-dialog>
+    </div>
+  </div>
+  <div class="demo-grid">
+    <div class="demo p95-panel" data-variant="sunken">
+      <div class="p95-empty">
+        <p95-operator size="2" label="The Operator"></p95-operator>
+        <h3>No logs yet</h3>
+        <p>Say "Hey Terminal" or hold Space.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================================================== TERMINAL -->
+<section id="terminal" aria-labelledby="h-terminal">
+  <h2 id="h-terminal">Terminal</h2>
+  <div class="demo-grid">
+    <div class="demo">
+      <h4>Command prompt</h4>
+      <p95-prompt id="prompt" placeholder="Try: time, status, theme amber, help" label="Command">
+        <div><span class="p95-text-ok">[ OK ] </span>TERMINAL-01 READY</div>
+      </p95-prompt>
+    </div>
+    <div class="demo boot-demo p95-crt">
+      <h4>Boot sequence</h4>
+      <p95-boot id="boot" autoplay tabindex="0">
+        <ol>
+          <li>PHOSPHOR BIOS v4.51</li>
+          <li data-level="ok">Memory test 8192K</li>
+          <li data-level="ok">Detecting drives</li>
+          <li data-level="ok">Network up</li>
+          <li data-level="info">Brain at 192.0.2.10</li>
+          <li data-level="ok">TERMINAL-01 ready</li>
+        </ol>
+        <progress class="p95-progress" max="100" value="0" aria-label="Boot"></progress>
+      </p95-boot>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-foot">
+  <p class="p95-small p95-text-secondary">PHOSPHOR95 // The Operator is Chicago95's avatar-default (GPL-3.0+/MIT), recoloured. Fonts: PxPlus by VileR (CC BY-SA 4.0), VT323 and W95FA (OFL).</p>
+</footer>
+</body>
+</html>

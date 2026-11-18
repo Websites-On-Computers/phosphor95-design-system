@@ -1,0 +1,38 @@
+{
+  "duration": {
+    "$type": "duration",
+    "instant": { "$value": { "value": 0,   "unit": "ms" } },
+    "tick":    { "$value": { "value": 50,  "unit": "ms" }, "$description": "One animation frame step for steps() motion (20 fps, CRT-era feel)" },
+    "fast":    { "$value": { "value": 100, "unit": "ms" } },
+    "base":    { "$value": { "value": 200, "unit": "ms" } },
+    "slow":    { "$value": { "value": 400, "unit": "ms" } },
+    "decay":   { "$value": { "value": 300, "unit": "ms" }, "$description": "Phosphor afterglow: how long glow lingers after hover/focus leaves" },
+    "blink":   { "$value": { "value": 530, "unit": "ms" }, "$description": "Half-period of the block cursor blink (classic VGA timing)" },
+    "type":    { "$value": { "value": 30,  "unit": "ms" }, "$description": "Per character for typed-out text (boot lines, Operator speech)" }
+  },
+  "easing": {
+    "$type": "cubicBezier",
+    "linear": { "$value": [0, 0, 1, 1] },
+    "decay":  { "$value": [0.2, 0, 0, 1], "$description": "Fast drop, long tail: phosphor fading out" },
+    "steps":  {
+      "$value": [0, 0, 1, 1],
+      "$description": "Stepped motion. DTCG has no steps() type: the value is linear for tools that ignore extensions; platforms read the step count from $extensions.",
+      "$extensions": { "com.phosphor95.steps": 4 }
+    }
+  },
+  "effect": {
+    "$type": "number",
+    "$description": "CRT/phosphor effect intensities (0..1). All effects are opt-in and off under reduced motion where they animate.",
+    "glow-strength":     { "$value": 0.55, "$description": "Alpha of the text glow halo" },
+    "scanline-opacity":  { "$value": 0.18, "$description": "Darkness of every second pixel row" },
+    "vignette":          { "$value": 0.35, "$description": "Edge darkening" },
+    "flicker":           { "$value": 0.03, "$description": "Brightness wobble amplitude. Kept well under any flash threshold; off with reduced motion" },
+    "rain-density":      { "$value": 0.6,  "$description": "Digital rain: fraction of columns active" }
+  },
+  "effect-size": {
+    "$type": "dimension",
+    "glow-radius":     { "$value": { "value": 4, "unit": "px" } },
+    "glow-radius-hot": { "$value": { "value": 8, "unit": "px" } },
+    "scanline-period": { "$value": { "value": 2, "unit": "px" }, "$description": "One dark row per 2px" }
+  }
+}

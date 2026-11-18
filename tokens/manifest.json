@@ -1,0 +1,23 @@
+{
+  "$description": "Token layering. Every theme = sources + that theme's layers, merged in order (later wins). This plays the role of the DTCG Resolver module's sets and modifiers.",
+  "sources": [
+    "primitive/*.json",
+    "semantic/base.json",
+    "component/*.json"
+  ],
+  "themes": {
+    "green": [
+      "semantic/themes/green.json"
+    ],
+    "amber": [
+      "semantic/themes/amber.json"
+    ],
+    "white": [
+      "semantic/themes/white.json"
+    ],
+    "hc": [
+      "semantic/themes/hc.json"
+    ]
+  },
+  "defaultTheme": "green"
+}

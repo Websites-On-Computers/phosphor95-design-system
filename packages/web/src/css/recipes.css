@@ -1,0 +1,31 @@
+/* Derived variables: bevel recipes, glow, focus. They are built from var()s, and a
+   var() is resolved where the property is declared, so they are declared on :root AND on
+   every [data-theme] element. That keeps theming working on any subtree. */
+:root, [data-theme] {
+  /* Win95 bevels as crisp 1px inset rings (no blur). Order = outer ring first. */
+  --p95-bevel-raised:
+    inset 1px 1px 0 var(--p95-bevel-light), inset -1px -1px 0 var(--p95-bevel-dark),
+    inset 2px 2px 0 var(--p95-bevel-hi),    inset -2px -2px 0 var(--p95-bevel-shadow);
+  --p95-bevel-pressed:
+    inset 1px 1px 0 var(--p95-bevel-dark),  inset -1px -1px 0 var(--p95-bevel-light),
+    inset 2px 2px 0 var(--p95-bevel-shadow), inset -2px -2px 0 var(--p95-bevel-hi);
+  --p95-bevel-sunken:
+    inset 1px 1px 0 var(--p95-bevel-shadow), inset -1px -1px 0 var(--p95-bevel-hi),
+    inset 2px 2px 0 var(--p95-bevel-dark),   inset -2px -2px 0 var(--p95-bevel-light);
+  --p95-bevel-etched:
+    inset 1px 1px 0 var(--p95-bevel-shadow), inset -1px -1px 0 var(--p95-bevel-hi),
+    inset 2px 2px 0 var(--p95-bevel-hi),     inset -2px -2px 0 var(--p95-bevel-shadow);
+  --p95-frame-default: 0 0 0 1px var(--p95-button-frame-default);
+
+  --p95-glow: 0 0 var(--p95-effect-size-glow-radius)
+    color-mix(in srgb, var(--p95-glow-base) calc(var(--p95-effect-glow-strength) * 100%), transparent);
+  --p95-glow-hot: 0 0 var(--p95-effect-size-glow-radius-hot)
+    color-mix(in srgb, var(--p95-glow-hot) calc(var(--p95-effect-glow-strength) * 100%), transparent);
+
+  /* 50% checkerboard dither of two adjacent steps (scrollbar track, disabled overlay). */
+  --p95-dither: repeating-conic-gradient(var(--p95-surface-face) 0 25%, var(--p95-surface-sunken) 0 50%) 0 0 / 2px 2px;
+
+  --p95-focus-offset: calc(-1 * (var(--p95-border-width-bevel) + var(--p95-focus-inset)));
+
+  color-scheme: dark;
+}

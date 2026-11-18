@@ -1,0 +1,207 @@
+{
+  "space": {
+    "$type": "dimension",
+    "$description": "4px base unit; 8px = one character cell wide. Name = pixels.",
+    "0": {
+      "$value": {
+        "value": 0,
+        "unit": "px"
+      }
+    },
+    "2": {
+      "$value": {
+        "value": 2,
+        "unit": "px"
+      },
+      "$description": "Bevel-width gaps only"
+    },
+    "4": {
+      "$value": {
+        "value": 4,
+        "unit": "px"
+      }
+    },
+    "8": {
+      "$value": {
+        "value": 8,
+        "unit": "px"
+      },
+      "$description": "1 cell wide"
+    },
+    "12": {
+      "$value": {
+        "value": 12,
+        "unit": "px"
+      }
+    },
+    "16": {
+      "$value": {
+        "value": 16,
+        "unit": "px"
+      },
+      "$description": "1 cell tall / 2 cells wide"
+    },
+    "24": {
+      "$value": {
+        "value": 24,
+        "unit": "px"
+      }
+    },
+    "32": {
+      "$value": {
+        "value": 32,
+        "unit": "px"
+      }
+    },
+    "48": {
+      "$value": {
+        "value": 48,
+        "unit": "px"
+      }
+    },
+    "64": {
+      "$value": {
+        "value": 64,
+        "unit": "px"
+      }
+    }
+  },
+  "size": {
+    "$type": "dimension",
+    "cell": {
+      "width": {
+        "$value": {
+          "value": 8,
+          "unit": "px"
+        },
+        "$description": "Character cell (UI font advance). TUI: 1 column."
+      },
+      "height": {
+        "$value": {
+          "value": 16,
+          "unit": "px"
+        },
+        "$description": "Character cell height. TUI: 1 row."
+      }
+    },
+    "control": {
+      "sm": {
+        "$value": {
+          "value": 24,
+          "unit": "px"
+        },
+        "$description": "Default control height (Win95's 23px, snapped to the grid). Also the minimum touch target on the web (WCAG 2.5.8)"
+      },
+      "md": {
+        "$value": {
+          "value": 32,
+          "unit": "px"
+        },
+        "$description": "Comfortable / touch-first controls (web, opt-in density)"
+      }
+    },
+    "icon": {
+      "sm": {
+        "$value": {
+          "value": 16,
+          "unit": "px"
+        }
+      },
+      "md": {
+        "$value": {
+          "value": 32,
+          "unit": "px"
+        }
+      },
+      "lg": {
+        "$value": {
+          "value": 48,
+          "unit": "px"
+        },
+        "$description": "Avatar native size"
+      }
+    },
+    "scrollbar": {
+      "$value": {
+        "value": 16,
+        "unit": "px"
+      }
+    }
+  },
+  "border": {
+    "width": {
+      "$type": "dimension",
+      "hair": {
+        "$value": {
+          "value": 1,
+          "unit": "px"
+        }
+      },
+      "bevel": {
+        "$value": {
+          "value": 2,
+          "unit": "px"
+        },
+        "$description": "Full bevel = 1px outer + 1px inner edge"
+      }
+    },
+    "radius": {
+      "$type": "dimension",
+      "none": {
+        "$value": {
+          "value": 0,
+          "unit": "px"
+        },
+        "$description": "The only radius. Nothing is rounded."
+      }
+    }
+  },
+  "breakpoint": {
+    "$type": "dimension",
+    "$description": "Web only. lg = the 1440x900 MacBook Air screen the theme was born on.",
+    "sm": {
+      "$value": {
+        "value": 640,
+        "unit": "px"
+      }
+    },
+    "md": {
+      "$value": {
+        "value": 960,
+        "unit": "px"
+      }
+    },
+    "lg": {
+      "$value": {
+        "value": 1440,
+        "unit": "px"
+      }
+    }
+  },
+  "layer": {
+    "$type": "number",
+    "$description": "Stacking order (z-index on the web, draw order in TUI).",
+    "base": {
+      "$value": 0
+    },
+    "raised": {
+      "$value": 1
+    },
+    "sticky": {
+      "$value": 10
+    },
+    "menu": {
+      "$value": 100
+    },
+    "dialog": {
+      "$value": 200
+    },
+    "toast": {
+      "$value": 300
+    },
+    "overlay": {
+      "$value": 400,
+      "$description": "CRT effects layer: pointer-events none, always on top"
+    }
+  }
+}

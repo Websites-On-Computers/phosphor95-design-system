@@ -1,0 +1,282 @@
+{
+  "$description": "Semantic roles, shared by every theme. Colours point at color.phosphor.1-12, the abstract theme ramp that each file in themes/ maps onto green, amber or white. Status and ANSI colours are chosen per theme.",
+  "surface": {
+    "$type": "color",
+    "void": {
+      "$value": "{color.void}",
+      "$description": "Behind everything: CRT off, desktop edges"
+    },
+    "base": {
+      "$value": "{color.phosphor.1}",
+      "$description": "Page/app background, text fields, list and table bodies, terminal background"
+    },
+    "sunken": {
+      "$value": "{color.phosphor.2}",
+      "$description": "Wells, tracks, zebra rows, pressed faces"
+    },
+    "face": {
+      "$value": "{color.phosphor.3}",
+      "$description": "Windows, panels, buttons, menus, dialogs"
+    },
+    "face-hover": {
+      "$value": "{color.phosphor.4}"
+    },
+    "face-pressed": {
+      "$value": "{color.phosphor.2}"
+    },
+    "selected-subtle": {
+      "$value": "{color.phosphor.5}",
+      "$description": "Selection in an unfocused list; inactive title bar"
+    },
+    "overlay": {
+      "$value": {
+        "colorSpace": "srgb",
+        "components": [
+          0,
+          0,
+          0
+        ],
+        "alpha": 0.72,
+        "hex": "#000000"
+      },
+      "$description": "Scrim behind modal dialogs"
+    }
+  },
+  "text": {
+    "$type": "color",
+    "primary": {
+      "$value": "{color.phosphor.10}",
+      "$description": "Body text, labels, values"
+    },
+    "secondary": {
+      "$value": "{color.phosphor.8}",
+      "$description": "Secondary text, hints, placeholders, captions (meets 4.5:1)"
+    },
+    "disabled": {
+      "$value": "{color.phosphor.6}",
+      "$description": "Disabled controls ONLY. Below 3:1 by design (WCAG exempts inactive controls); never for hints"
+    },
+    "hot": {
+      "$value": "{color.phosphor.12}",
+      "$description": "Hover/focus text, headings, the cursor: glow means hot"
+    },
+    "link": {
+      "$value": "{color.phosphor.11}"
+    },
+    "inverse": {
+      "$value": "{color.void}",
+      "$description": "Text on solid phosphor fills (selection, active title bar, primary fill)"
+    }
+  },
+  "bevel": {
+    "$type": "color",
+    "$description": "Win95 four-edge bevel. Raised = hi/light on top-left, dark/shadow on bottom-right; sunken = the reverse.",
+    "hi": {
+      "$value": "{color.phosphor.9}",
+      "$description": "Inner highlight (Win95 #FFFFFF)"
+    },
+    "light": {
+      "$value": "{color.phosphor.7}",
+      "$description": "Outer highlight (Win95 #DFDFDF)"
+    },
+    "shadow": {
+      "$value": "{color.phosphor.2}",
+      "$description": "Inner shadow (Win95 #808080)"
+    },
+    "dark": {
+      "$value": "{color.void}",
+      "$description": "Outer shadow (Win95 #000000)"
+    }
+  },
+  "border": {
+    "$type": "color",
+    "subtle": {
+      "$value": "{color.phosphor.6}",
+      "$description": "Decorative rules and separators (not for meaningful boundaries)"
+    },
+    "default": {
+      "$value": "{color.phosphor.7}",
+      "$description": "Control and panel boundaries (meets 3:1 on face)"
+    },
+    "strong": {
+      "$value": "{color.phosphor.9}",
+      "$description": "Default-button frame, active window frame, table header rule"
+    },
+    "focus": {
+      "$value": "{color.phosphor.12}"
+    }
+  },
+  "select": {
+    "$type": "color",
+    "bg": {
+      "$value": "{color.phosphor.10}",
+      "$description": "Inverted selection, as on a real terminal"
+    },
+    "fg": {
+      "$value": "{text.inverse}"
+    },
+    "inactive-bg": {
+      "$value": "{surface.selected-subtle}"
+    },
+    "inactive-fg": {
+      "$value": "{color.phosphor.10}"
+    }
+  },
+  "title": {
+    "$type": "color",
+    "active": {
+      "bg": {
+        "$value": "{color.phosphor.10}"
+      },
+      "fg": {
+        "$value": "{text.inverse}"
+      }
+    },
+    "inactive": {
+      "bg": {
+        "$value": "{surface.selected-subtle}"
+      },
+      "fg": {
+        "$value": "{color.phosphor.8}"
+      }
+    }
+  },
+  "fill": {
+    "$type": "color",
+    "solid": {
+      "$value": "{color.phosphor.10}",
+      "$description": "Progress fill, primary/toggle-on fill, meter"
+    },
+    "track": {
+      "$value": "{surface.sunken}"
+    }
+  },
+  "glow": {
+    "$type": "color",
+    "$description": "Halo colours for text-shadow/bloom. Alpha comes from effect.glow-strength.",
+    "base": {
+      "$value": "{color.phosphor.10}"
+    },
+    "hot": {
+      "$value": "{color.phosphor.12}"
+    }
+  },
+  "focus": {
+    "ring": {
+      "$type": "border",
+      "$value": {
+        "color": "{border.focus}",
+        "width": "{border.width.hair}",
+        "style": "dotted"
+      },
+      "$description": "Win95 dotted focus rectangle, drawn in hot phosphor, inset 2px (web: outline-offset -4px on buttons)"
+    },
+    "inset": {
+      "$type": "dimension",
+      "$value": "{space.2}",
+      "$description": "Gap between a control's edge and its focus ring (web: outline-offset = -(bevel width + inset) = -4px)"
+    }
+  },
+  "type": {
+    "$type": "typography",
+    "body": {
+      "$value": {
+        "fontFamily": "{font.family.ui}",
+        "fontSize": "{font.size.16}",
+        "fontWeight": "{font.weight.regular}",
+        "letterSpacing": "{space.0}",
+        "lineHeight": "{font.line-height.prose}"
+      }
+    },
+    "ui": {
+      "$value": {
+        "fontFamily": "{font.family.ui}",
+        "fontSize": "{font.size.16}",
+        "fontWeight": "{font.weight.regular}",
+        "letterSpacing": "{space.0}",
+        "lineHeight": "{font.line-height.cell}"
+      }
+    },
+    "small": {
+      "$value": {
+        "fontFamily": "{font.family.small}",
+        "fontSize": "{font.size.14}",
+        "fontWeight": "{font.weight.regular}",
+        "letterSpacing": "{space.0}",
+        "lineHeight": "{font.line-height.cell}"
+      }
+    },
+    "code": {
+      "$value": {
+        "fontFamily": "{font.family.mono}",
+        "fontSize": "{font.size.16}",
+        "fontWeight": "{font.weight.regular}",
+        "letterSpacing": "{space.0}",
+        "lineHeight": "{font.line-height.cell}"
+      }
+    },
+    "label": {
+      "$value": {
+        "fontFamily": "{font.family.ui}",
+        "fontSize": "{font.size.16}",
+        "fontWeight": "{font.weight.regular}",
+        "letterSpacing": "{space.0}",
+        "lineHeight": "{font.line-height.cell}"
+      },
+      "$extensions": {
+        "com.phosphor95.textCase": "uppercase"
+      },
+      "$description": "System labels, status lines, title bars"
+    },
+    "heading-1": {
+      "$value": {
+        "fontFamily": "{font.family.display}",
+        "fontSize": "{font.size.64}",
+        "fontWeight": "{font.weight.regular}",
+        "letterSpacing": "{space.0}",
+        "lineHeight": "{font.line-height.cell}"
+      },
+      "$extensions": {
+        "com.phosphor95.textCase": "uppercase"
+      }
+    },
+    "heading-2": {
+      "$value": {
+        "fontFamily": "{font.family.display}",
+        "fontSize": "{font.size.48}",
+        "fontWeight": "{font.weight.regular}",
+        "letterSpacing": "{space.0}",
+        "lineHeight": "{font.line-height.cell}"
+      }
+    },
+    "heading-3": {
+      "$value": {
+        "fontFamily": "{font.family.display}",
+        "fontSize": "{font.size.32}",
+        "fontWeight": "{font.weight.regular}",
+        "letterSpacing": "{space.0}",
+        "lineHeight": "{font.line-height.cell}"
+      }
+    },
+    "display": {
+      "$value": {
+        "fontFamily": "{font.family.display}",
+        "fontSize": "{font.size.96}",
+        "fontWeight": "{font.weight.regular}",
+        "letterSpacing": "{space.0}",
+        "lineHeight": "{font.line-height.cell}"
+      },
+      "$extensions": {
+        "com.phosphor95.textCase": "uppercase"
+      },
+      "$description": "Wordmark, splash, clocks"
+    }
+  },
+  "disabled": {
+    "border-style": {
+      "$type": "strokeStyle",
+      "$value": "solid",
+      "$description": "Border style of disabled controls. HC overrides to dashed so disabled reads without dim colour"
+    }
+  }
+}

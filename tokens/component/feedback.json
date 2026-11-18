@@ -1,0 +1,80 @@
+{
+  "tooltip": {
+    "$type": "color",
+    "$description": "Inverted: phosphor fill, void text (Win95's yellow tooltip, in our light)",
+    "bg": {
+      "$value": "{select.bg}"
+    },
+    "fg": {
+      "$value": "{select.fg}"
+    },
+    "border": {
+      "$value": "{bevel.dark}"
+    }
+  },
+  "toast": {
+    "$type": "color",
+    "bg": {
+      "$value": "{surface.face}"
+    },
+    "text": {
+      "$value": "{text.primary}"
+    },
+    "width": {
+      "$type": "dimension",
+      "$value": {
+        "value": 320,
+        "unit": "px"
+      },
+      "$description": "40 cells"
+    },
+    "accent-width": {
+      "$type": "dimension",
+      "$value": "{border.width.bevel}",
+      "$description": "Status-coloured left edge"
+    }
+  },
+  "badge": {
+    "$type": "color",
+    "$description": "Status tag, e.g. [ OK ] [WARN]. Uses status.* per variant.",
+    "bg": {
+      "$value": "{surface.sunken}"
+    },
+    "fg": {
+      "$value": "{text.primary}"
+    }
+  },
+  "scrollbar": {
+    "$type": "color",
+    "track": {
+      "$value": "{surface.sunken}"
+    },
+    "thumb": {
+      "$value": "{surface.face}"
+    },
+    "size": {
+      "$type": "dimension",
+      "$value": "{size.scrollbar}"
+    }
+  },
+  "statusbar": {
+    "$type": "color",
+    "$description": "Taskbar / status line / key-hint bar",
+    "bg": {
+      "$value": "{surface.face}"
+    },
+    "fg": {
+      "$value": "{text.primary}"
+    },
+    "key-fg": {
+      "$value": "{text.inverse}"
+    },
+    "key-bg": {
+      "$value": "{fill.solid}"
+    },
+    "height": {
+      "$type": "dimension",
+      "$value": "{size.control.sm}"
+    }
+  }
+}

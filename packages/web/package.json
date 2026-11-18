@@ -1,0 +1,42 @@
+{
+  "name": "@phosphor95/web",
+  "version": "0.1.0",
+  "description": "Phosphor95 design system for the web: Win95 structure on a green phosphor CRT. Tokens, classless base CSS, components, opt-in CRT effects and vanilla Web Components.",
+  "type": "module",
+  "style": "p95.css",
+  "exports": {
+    ".": "./js/index.js",
+    "./css": "./p95.css",
+    "./tokens.css": "./p95-tokens.css",
+    "./js/*": "./js/*"
+  },
+  "files": [
+    "p95.css",
+    "p95-tokens.css",
+    "fonts",
+    "js",
+    "brand",
+    "icons"
+  ],
+  "sideEffects": [
+    "*.css",
+    "./js/*.js"
+  ],
+  "keywords": [
+    "design-system",
+    "win95",
+    "crt",
+    "phosphor",
+    "retro",
+    "web-components",
+    "css"
+  ],
+  "license": "UNLICENSED",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Websites-On-Computers/phosphor95-design-system",
+    "directory": "packages/web"
+  },
+  "homepage": "https://github.com/Websites-On-Computers/phosphor95-design-system"
+}

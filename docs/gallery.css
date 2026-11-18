@@ -1,0 +1,54 @@
+/* Gallery page layout only. Everything visual comes from p95.css. */
+@layer gallery {
+  body { margin: 0; }
+  .skip { position: absolute; left: -9999px; top: 8px; z-index: 1000; }
+  .skip:focus { left: 8px; }
+
+  .hero { position: relative; isolation: isolate; overflow: hidden; min-height: 320px; display: grid; align-items: end; background: var(--p95-surface-void); }
+  .hero-inner { position: relative; display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 24px; padding: 48px 16px 24px; max-width: 1200px; margin: 0 auto; width: 100%; }
+  /* Rain never runs behind text: the lockup sits on a solid void backing. */
+  .lockup { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; padding: 16px; background: var(--p95-surface-void); box-shadow: 0 0 0 1px var(--p95-border-subtle); }
+  .tagline { margin: 16px 0 0; }
+  .controls { display: grid; gap: 8px; }
+
+  .toc { position: sticky; top: 0; z-index: var(--p95-layer-sticky); flex-wrap: wrap; justify-content: center; gap: 0; }
+  .toc a { padding: 0 8px; color: var(--p95-text-primary); text-decoration: none; text-transform: uppercase; line-height: 24px; }
+  .toc a:hover { background: var(--p95-select-bg); color: var(--p95-select-fg); text-shadow: none; }
+
+  main { max-width: 1200px; margin: 0 auto; padding: 0 16px 64px; }
+  main > section { padding-block: 32px 16px; scroll-margin-top: 40px; }
+  main > section + section { box-shadow: inset 0 2px 0 -1px var(--p95-border-subtle); }
+  .lede { color: var(--p95-text-secondary); max-width: 72ch; }
+
+  .demo-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); margin-block-end: 16px; align-items: start; }
+  .demo-grid.wide { grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); }
+  .demo { padding: 16px; background: var(--p95-surface-face); box-shadow: var(--p95-bevel-raised); min-width: 0; }
+  .demo > h4:first-child { margin-top: 0; }
+  .demo .p95-row { margin-block-end: 8px; }
+
+  .field { display: grid; gap: 4px; line-height: 16px; }
+  .help { margin: -4px 0 0; line-height: 16px; }
+
+  .operators figure { display: grid; justify-items: start; gap: 8px; margin: 0; }
+  .operators figcaption { color: var(--p95-text-secondary); font-family: var(--p95-font-family-small); font-size: 14px; }
+  .p95-row.p95-gap-24 { margin-block: 16px; align-items: end; }
+
+  .swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(88px, 1fr)); gap: 8px; margin-block-end: 16px; }
+  .swatch { display: grid; gap: 4px; font-family: var(--p95-font-family-small); font-size: 14px; line-height: 14px; }
+  .swatch-chip { height: 48px; box-shadow: var(--p95-bevel-sunken); padding: 2px; }
+  .swatch-chip > div { height: 100%; }
+  .swatch code { color: var(--p95-text-secondary); font-family: inherit; font-size: inherit; }
+
+  .specimen { margin: 0; }
+  .context-target { padding: 8px 16px; cursor: context-menu; }
+  .scroll-demo { height: 96px; padding: 8px; background: var(--p95-surface-base); box-shadow: var(--p95-bevel-sunken); }
+  .boot-demo { min-height: 220px; }
+  .boot-demo p95-boot { padding: 8px; background: var(--p95-surface-base); box-shadow: var(--p95-bevel-sunken); }
+  .boot-demo progress { margin-top: 8px; }
+  .site-foot { padding: 16px; text-align: center; background: var(--p95-surface-face); }
+
+  @media (max-width: 640px) {
+    .hero-inner { padding-top: 32px; }
+    .lockup p95-wordmark { --_scale: 2 !important; }
+  }
+}

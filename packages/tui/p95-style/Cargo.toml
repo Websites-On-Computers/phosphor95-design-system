@@ -1,0 +1,23 @@
+[package]
+name = "p95-style"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+description = "Phosphor95 design system for terminal UIs: palettes, colour-depth fallback, glyph tiers, bevel borders and ratatui styles."
+license = "UNLICENSED"
+publish = false
+repository = "https://github.com/Websites-On-Computers/phosphor95-design-system"
+keywords = ["tui", "ratatui", "theme", "design-system", "retro"]
+
+[features]
+default = ["ratatui"]
+# Semantic styles, border sets and widget bundles for ratatui. Without it the crate is just
+# palettes + environment detection + glyphs (usable from any renderer, e.g. an OpenGL HUD).
+ratatui = ["dep:ratatui"]
+
+[dependencies]
+ratatui = { version = "0.30", optional = true }
+
+[[example]]
+name = "gallery"
+required-features = ["ratatui"]

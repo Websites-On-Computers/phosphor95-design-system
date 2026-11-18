@@ -1,0 +1,52 @@
+{
+  "code": {
+    "$type": "color",
+    "$description": "Syntax colouring. Monochrome-first: mostly lightness steps; only numbers borrow warn's hue.",
+    "bg": {
+      "$value": "{surface.base}"
+    },
+    "text": {
+      "$value": "{text.primary}"
+    },
+    "keyword": {
+      "$value": "{text.hot}"
+    },
+    "string": {
+      "$value": "{text.link}"
+    },
+    "number": {
+      "$value": "{status.warn.fg}"
+    },
+    "comment": {
+      "$value": "{text.secondary}"
+    }
+  },
+  "diff": {
+    "$type": "color",
+    "$description": "Diff lines always carry +/- gutters as well as colour.",
+    "added-fg": {
+      "$value": "{status.ok.fg}"
+    },
+    "added-bg": {
+      "$value": "{status.ok.bg}"
+    },
+    "removed-fg": {
+      "$value": "{status.error.fg}"
+    },
+    "removed-bg": {
+      "$value": "{status.error.bg}"
+    },
+    "removed-intraline-fg": {
+      "$value": "{text.inverse}"
+    },
+    "removed-intraline-bg": {
+      "$value": "{status.error.fg}"
+    },
+    "added-intraline-fg": {
+      "$value": "{text.inverse}"
+    },
+    "added-intraline-bg": {
+      "$value": "{status.ok.fg}"
+    }
+  }
+}

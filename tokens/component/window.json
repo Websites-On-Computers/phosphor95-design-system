@@ -1,0 +1,42 @@
+{
+  "window": {
+    "$description": "Window / dialog chrome: 2px raised bevel, title bar, client area.",
+    "$type": "color",
+    "bg": {
+      "$value": "{surface.face}"
+    },
+    "client-bg": {
+      "$value": "{surface.base}"
+    },
+    "titlebar": {
+      "active-bg": {
+        "$value": "{title.active.bg}"
+      },
+      "active-fg": {
+        "$value": "{title.active.fg}"
+      },
+      "inactive-bg": {
+        "$value": "{title.inactive.bg}"
+      },
+      "inactive-fg": {
+        "$value": "{title.inactive.fg}"
+      },
+      "height": {
+        "$type": "dimension",
+        "$value": "{size.control.sm}"
+      }
+    },
+    "control-size": {
+      "$type": "dimension",
+      "$value": {
+        "value": 20,
+        "unit": "px"
+      },
+      "$description": "Title-bar buttons: 20px fits a 24px bar with 2px margins (off-scale by necessity)"
+    },
+    "padding": {
+      "$type": "dimension",
+      "$value": "{space.8}"
+    }
+  }
+}

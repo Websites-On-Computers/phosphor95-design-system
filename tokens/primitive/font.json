@@ -1,0 +1,31 @@
+{
+  "font": {
+    "family": {
+      "$type": "fontFamily",
+      "ui":      { "$value": ["PxPlus IBM VGA 8x16", "W95FA", "ui-monospace", "monospace"], "$description": "UI text. Native 16px; render at whole multiples only." },
+      "small":   { "$value": ["PxPlus IBM VGA 8x14", "PxPlus IBM VGA 8x16", "ui-monospace", "monospace"], "$description": "Compact UI text (captions, dense tables). Native 14px." },
+      "mono":    { "$value": ["PxPlus IBM VGA 9x16", "ui-monospace", "monospace"], "$description": "Code, terminal, tabular data. Native 16px, 9px advance." },
+      "display": { "$value": ["VT323", "PxPlus IBM VGA 8x16", "monospace"], "$description": "Big text: wordmark, clocks, splash. Use at 32px and up." },
+      "alt-ui":  { "$value": ["W95FA", "PxPlus IBM VGA 8x16", "sans-serif"], "$description": "Optional proportional Win95-style UI face. Native 16px." }
+    },
+    "size": {
+      "$type": "dimension",
+      "$description": "Pixel fonts are bitmaps. Only these sizes are crisp: native sizes and whole multiples of them.",
+      "14": { "$value": { "value": 14, "unit": "px" }, "$description": "8x14 native" },
+      "16": { "$value": { "value": 16, "unit": "px" }, "$description": "8x16 / 9x16 native: the body size" },
+      "32": { "$value": { "value": 32, "unit": "px" }, "$description": "2x" },
+      "48": { "$value": { "value": 48, "unit": "px" }, "$description": "3x" },
+      "64": { "$value": { "value": 64, "unit": "px" }, "$description": "4x" },
+      "96": { "$value": { "value": 96, "unit": "px" }, "$description": "6x, splash only" }
+    },
+    "weight": {
+      "$type": "fontWeight",
+      "regular": { "$value": 400, "$description": "The only weight. Pixel fonts have no bold, and synthetic bold smears; use case, inversion or glow for emphasis." }
+    },
+    "line-height": {
+      "$type": "number",
+      "cell":  { "$value": 1,   "$description": "One character cell. Controls, terminal, tables." },
+      "prose": { "$value": 1.5, "$description": "Running text on the web (24px at 16px)." }
+    }
+  }
+}

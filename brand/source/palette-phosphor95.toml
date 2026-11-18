@@ -1,0 +1,54 @@
+# Phosphor-95 palette — single source of truth.
+# Every generated file (GTK, Shell, terminal, boot, wallpaper, icons) reads from here.
+# Change a value, run `./phosphor build && ./phosphor install`, done.
+
+[core]
+void        = "#000000"   # true black (bevel-dark, deepest shadows)
+base        = "#020a04"   # text fields, terminal background, list views
+face        = "#0a2412"   # window / panel / button face (Win95 #C0C0C0)
+face_hover  = "#0e3018"
+shadow      = "#041208"   # bevel shadow (Win95 #808080)
+bevel_light = "#1c7a36"   # outer highlight (Win95 #DFDFDF)
+bevel_hi    = "#2fbf55"   # inner highlight (Win95 #FFFFFF)
+
+[text]
+fg          = "#33ff66"   # primary phosphor
+fg_dim      = "#1fa046"   # secondary / insensitive
+fg_faint    = "#0f5a24"   # disabled, hints
+glow        = "#b6ffc8"   # hot phosphor: hover, headings, cursor
+
+[select]
+bg          = "#33ff66"   # inverted selection (classic terminal)
+fg          = "#000000"
+
+[title]
+active_bg     = "#33ff66"
+active_fg     = "#000000"
+inactive_bg   = "#0b4419"
+inactive_fg   = "#1fa046"
+
+[status]
+warn        = "#ffb000"   # amber-monitor
+error       = "#ff3b3b"
+ok          = "#33ff66"
+info        = "#7dffa8"
+
+# 16-colour terminal palette. Mostly greens so `ls`, git, etc. stay on-theme;
+# amber + red are kept distinct so warnings/errors remain readable.
+[ansi]
+black          = "#020a04"
+red            = "#ff3b3b"
+green          = "#33ff66"
+yellow         = "#ffb000"
+blue           = "#1fa046"
+magenta        = "#7dffa8"
+cyan           = "#5dffb0"
+white          = "#a8ffbf"
+bright_black   = "#0f5a24"
+bright_red     = "#ff7a6b"
+bright_green   = "#66ff8c"
+bright_yellow  = "#ffd060"
+bright_blue    = "#2fbf55"
+bright_magenta = "#b6ffc8"
+bright_cyan    = "#9dffd0"
+bright_white   = "#e6ffec"

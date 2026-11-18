@@ -1,0 +1,23 @@
+{
+  "name": "Phosphor95 Green",
+  "background": "#020a04",
+  "foreground": "#33ff66",
+  "cursorColor": "#b6ffc8",
+  "selectionBackground": "#33ff66",
+  "black": "#020a04",
+  "brightBlack": "#0f5a24",
+  "red": "#ff3b3b",
+  "brightRed": "#ff7a6b",
+  "green": "#33ff66",
+  "brightGreen": "#66ff8c",
+  "yellow": "#ffb000",
+  "brightYellow": "#ffd060",
+  "blue": "#1fa046",
+  "brightBlue": "#2fbf55",
+  "purple": "#7dffa8",
+  "brightPurple": "#b6ffc8",
+  "cyan": "#5dffb0",
+  "brightCyan": "#9dffd0",
+  "white": "#a8ffbf",
+  "brightWhite": "#e6ffec"
+}

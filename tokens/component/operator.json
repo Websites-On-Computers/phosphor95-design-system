@@ -1,0 +1,32 @@
+{
+  "operator": {
+    "$description": "The Operator (avatar). Pixel colours come from color.avatar.<ramp>; the green set is the lock-screen image exactly. Themes override these six.",
+    "$type": "color",
+    "hair": {
+      "$value": "{color.avatar.green.hair}"
+    },
+    "shade-1": {
+      "$value": "{color.avatar.green.shade-1}"
+    },
+    "shade-2": {
+      "$value": "{color.avatar.green.shade-2}"
+    },
+    "mid": {
+      "$value": "{color.avatar.green.mid}"
+    },
+    "skin": {
+      "$value": "{color.avatar.green.skin}"
+    },
+    "light": {
+      "$value": "{color.avatar.green.light}"
+    },
+    "frame-bg": {
+      "$value": "{surface.base}"
+    },
+    "size": {
+      "$type": "dimension",
+      "$value": "{size.icon.lg}",
+      "$description": "Native size; scale by whole multiples only"
+    }
+  }
+}

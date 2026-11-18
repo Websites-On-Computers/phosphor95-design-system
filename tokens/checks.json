@@ -1,0 +1,350 @@
+{
+  "$description": "Build gate: WCAG 2.x contrast minimums, checked for every theme (optional `themes` limits a check). 7 = AAA body, 4.5 = AA body, 3 = UI components and graphics (1.4.11). text.disabled and border.subtle are deliberately unchecked (inactive/decorative). Not checked by rule: text.secondary on surface.face-hover; hovered items brighten their text to primary/hot (glow means hot).",
+  "contrast": [
+    {
+      "fg": "text.primary",
+      "bg": "surface.base",
+      "min": 7,
+      "why": "body text (AAA)"
+    },
+    {
+      "fg": "text.secondary",
+      "bg": "surface.base",
+      "min": 4.5,
+      "why": "secondary text, hints, placeholders (AA)"
+    },
+    {
+      "fg": "text.link",
+      "bg": "surface.base",
+      "min": 4.5,
+      "why": "links (AA)"
+    },
+    {
+      "fg": "text.hot",
+      "bg": "surface.base",
+      "min": 7,
+      "why": "hover/focus text (AAA)"
+    },
+    {
+      "fg": "text.primary",
+      "bg": "surface.face",
+      "min": 7,
+      "why": "body text (AAA)"
+    },
+    {
+      "fg": "text.secondary",
+      "bg": "surface.face",
+      "min": 4.5,
+      "why": "secondary text, hints, placeholders (AA)"
+    },
+    {
+      "fg": "text.link",
+      "bg": "surface.face",
+      "min": 4.5,
+      "why": "links (AA)"
+    },
+    {
+      "fg": "text.hot",
+      "bg": "surface.face",
+      "min": 7,
+      "why": "hover/focus text (AAA)"
+    },
+    {
+      "fg": "text.primary",
+      "bg": "surface.face-hover",
+      "min": 7,
+      "why": "body text (AAA)"
+    },
+    {
+      "fg": "text.link",
+      "bg": "surface.face-hover",
+      "min": 4.5,
+      "why": "links (AA)"
+    },
+    {
+      "fg": "text.hot",
+      "bg": "surface.face-hover",
+      "min": 7,
+      "why": "hover/focus text (AAA)"
+    },
+    {
+      "fg": "text.primary",
+      "bg": "surface.sunken",
+      "min": 7,
+      "why": "zebra rows, wells"
+    },
+    {
+      "fg": "text.primary",
+      "bg": "surface.selected-subtle",
+      "min": 4.5,
+      "why": "text on inactive selection"
+    },
+    {
+      "fg": "select.fg",
+      "bg": "select.bg",
+      "min": 7,
+      "why": "inverted selection (AAA)"
+    },
+    {
+      "fg": "select.inactive-fg",
+      "bg": "select.inactive-bg",
+      "min": 4.5,
+      "why": "unfocused selection"
+    },
+    {
+      "fg": "title.active.fg",
+      "bg": "title.active.bg",
+      "min": 7,
+      "why": "active title bar"
+    },
+    {
+      "fg": "title.inactive.fg",
+      "bg": "title.inactive.bg",
+      "min": 3,
+      "why": "inactive title bar (UI, large-ish label)"
+    },
+    {
+      "fg": "text.inverse",
+      "bg": "fill.solid",
+      "min": 7,
+      "why": "text on solid fills (primary button, progress label)"
+    },
+    {
+      "fg": "button.primary.text",
+      "bg": "button.primary.face-hover",
+      "min": 7,
+      "why": "primary button hover"
+    },
+    {
+      "fg": "tooltip.fg",
+      "bg": "tooltip.bg",
+      "min": 7,
+      "why": "tooltip"
+    },
+    {
+      "fg": "statusbar.key-fg",
+      "bg": "statusbar.key-bg",
+      "min": 7,
+      "why": "key caps in hint bar"
+    },
+    {
+      "fg": "tabs.inactive-fg",
+      "bg": "tabs.inactive-bg",
+      "min": 4.5,
+      "why": "inactive tab label"
+    },
+    {
+      "fg": "menu.shortcut",
+      "bg": "menu.bg",
+      "min": 4.5,
+      "why": "menu shortcut text"
+    },
+    {
+      "fg": "border.default",
+      "bg": "surface.face",
+      "min": 3,
+      "why": "control boundaries on panels"
+    },
+    {
+      "fg": "border.default",
+      "bg": "surface.base",
+      "min": 3,
+      "why": "field/list boundaries"
+    },
+    {
+      "fg": "border.focus",
+      "bg": "surface.face",
+      "min": 3,
+      "why": "focus ring on panels"
+    },
+    {
+      "fg": "border.focus",
+      "bg": "surface.base",
+      "min": 3,
+      "why": "focus ring in fields"
+    },
+    {
+      "fg": "fill.solid",
+      "bg": "fill.track",
+      "min": 3,
+      "why": "progress fill vs track"
+    },
+    {
+      "fg": "check.mark",
+      "bg": "check.bg",
+      "min": 3,
+      "why": "checkbox mark"
+    },
+    {
+      "fg": "status.ok.fg",
+      "bg": "surface.face",
+      "min": 4.5,
+      "why": "ok text on panels"
+    },
+    {
+      "fg": "status.ok.fg",
+      "bg": "surface.base",
+      "min": 4.5,
+      "why": "ok text on background"
+    },
+    {
+      "fg": "status.ok.fg",
+      "bg": "status.ok.bg",
+      "min": 4.5,
+      "why": "ok text on its tinted surface"
+    },
+    {
+      "fg": "status.ok.border",
+      "bg": "surface.face",
+      "min": 3,
+      "why": "ok border visible"
+    },
+    {
+      "fg": "status.info.fg",
+      "bg": "surface.face",
+      "min": 4.5,
+      "why": "info text on panels"
+    },
+    {
+      "fg": "status.info.fg",
+      "bg": "surface.base",
+      "min": 4.5,
+      "why": "info text on background"
+    },
+    {
+      "fg": "status.info.fg",
+      "bg": "status.info.bg",
+      "min": 4.5,
+      "why": "info text on its tinted surface"
+    },
+    {
+      "fg": "status.info.border",
+      "bg": "surface.face",
+      "min": 3,
+      "why": "info border visible"
+    },
+    {
+      "fg": "status.warn.fg",
+      "bg": "surface.face",
+      "min": 4.5,
+      "why": "warn text on panels"
+    },
+    {
+      "fg": "status.warn.fg",
+      "bg": "surface.base",
+      "min": 4.5,
+      "why": "warn text on background"
+    },
+    {
+      "fg": "status.warn.fg",
+      "bg": "status.warn.bg",
+      "min": 4.5,
+      "why": "warn text on its tinted surface"
+    },
+    {
+      "fg": "status.warn.border",
+      "bg": "surface.face",
+      "min": 3,
+      "why": "warn border visible"
+    },
+    {
+      "fg": "status.error.fg",
+      "bg": "surface.face",
+      "min": 4.5,
+      "why": "error text on panels"
+    },
+    {
+      "fg": "status.error.fg",
+      "bg": "surface.base",
+      "min": 4.5,
+      "why": "error text on background"
+    },
+    {
+      "fg": "status.error.fg",
+      "bg": "status.error.bg",
+      "min": 4.5,
+      "why": "error text on its tinted surface"
+    },
+    {
+      "fg": "status.error.border",
+      "bg": "surface.face",
+      "min": 3,
+      "why": "error border visible"
+    },
+    {
+      "fg": "ansi.bright-black",
+      "bg": "ansi.black",
+      "min": 4.5,
+      "why": "HC: dim terminal text must stay readable",
+      "themes": [
+        "hc"
+      ]
+    },
+    {
+      "fg": "button.toggle.text-on",
+      "bg": "button.toggle.face-on",
+      "min": 7,
+      "why": "toggle on"
+    },
+    {
+      "fg": "button.toggle.text-on",
+      "bg": "button.toggle.face-on-hover",
+      "min": 7,
+      "why": "toggle on, hover"
+    },
+    {
+      "fg": "code.keyword",
+      "bg": "code.bg",
+      "min": 4.5,
+      "why": "code keyword"
+    },
+    {
+      "fg": "code.string",
+      "bg": "code.bg",
+      "min": 4.5,
+      "why": "code string"
+    },
+    {
+      "fg": "code.number",
+      "bg": "code.bg",
+      "min": 4.5,
+      "why": "code number"
+    },
+    {
+      "fg": "code.comment",
+      "bg": "code.bg",
+      "min": 4.5,
+      "why": "code comment"
+    },
+    {
+      "fg": "diff.added-fg",
+      "bg": "diff.added-bg",
+      "min": 4.5,
+      "why": "diff added line"
+    },
+    {
+      "fg": "diff.removed-fg",
+      "bg": "diff.removed-bg",
+      "min": 4.5,
+      "why": "diff removed line"
+    },
+    {
+      "fg": "diff.removed-intraline-fg",
+      "bg": "diff.removed-intraline-bg",
+      "min": 4.5,
+      "why": "diff removed word highlight"
+    },
+    {
+      "fg": "diff.added-intraline-fg",
+      "bg": "diff.added-intraline-bg",
+      "min": 4.5,
+      "why": "diff added word highlight"
+    },
+    {
+      "fg": "slider.fill",
+      "bg": "slider.track",
+      "min": 3,
+      "why": "slider fill vs track"
+    }
+  ]
+}

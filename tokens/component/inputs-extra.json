@@ -1,0 +1,31 @@
+{
+  "slider": {
+    "$type": "color",
+    "track": {
+      "$value": "{fill.track}"
+    },
+    "fill": {
+      "$value": "{fill.solid}"
+    },
+    "thumb": {
+      "$value": "{button.face}"
+    },
+    "track-height": {
+      "$type": "dimension",
+      "$value": "{space.4}"
+    }
+  },
+  "split": {
+    "$type": "color",
+    "handle": {
+      "$value": "{surface.face}"
+    },
+    "handle-hover": {
+      "$value": "{surface.face-hover}"
+    },
+    "handle-size": {
+      "$type": "dimension",
+      "$value": "{space.4}"
+    }
+  }
+}
